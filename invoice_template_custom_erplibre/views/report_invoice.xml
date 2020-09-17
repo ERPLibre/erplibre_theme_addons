@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <template id="report_invoice_document_custom" name="Custom template invoice"
+              inherit_id="account.report_invoice_document">
+      <xpath expr="//t[@t-call='web.external_layout']/div[hasclass('page')]/h2/span[1]" position="replace">
+        <span t-if="o.type == 'out_invoice' and o.state in ('open', 'in_payment', 'paid')">No. de facture</span>
+      </xpath>
+      <xpath expr="//t[@t-call='web.external_layout']/div[hasclass('page')]/h2/span[contains(text(), 'Draft Invoice')]" position="replace">
+        <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft No. de facturezzz</span>
+      </xpath>
+    </template>
+  </data>
+</odoo>
