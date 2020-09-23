@@ -1,6 +1,113 @@
+// ------------------------------------------------------------------
+// Geo
+// ------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
+
+:root {
+    --teal: #55D7D1;
+    --grey: #7F7F7F;
+    --light-grey: #BFBFBF;
+    --light: #F3F3F3;
+    --black: #000;
+    --white: #FFF;
+}
+
+.o_custom_erplibre_header,
+.o_report_layout_custom_erplibre,
 .o_custom_erplibre_footer {
-    margin-top: 200px;
-    .list-inline-item {
-        white-space: nowrap;
+    font-family: 'Geo', sans-serif;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.o_custom_erplibre_header {
+    @at-root .container {
+        max-width: 100%;
+        padding: 0;
+        margin: 0 ;
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: 10rem 1fr 10rem;
+
+        & > * {
+            padding: 1rem;
+        }
+    }
+    @at-root .header {
+        grid-column: 1 / 1;
+        grid-row: 2 / 2;
+        background: var(--grey);
+        color: var(--white);
+    }
+    @at-root .o_report_layout_custom_erplibre {
+        grid-column: 2 / 2;
+        grid-row: 1 / -1;
+    }
+    @at-root .o_custom_erplibre_footer {
+        grid-column: 1 / 1;
+        grid-row: 3 / 3;
+        background: var(--grey);
+        color: var(--white);
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .img-logo {
+        width: 100%;
+        margin-bottom: 3rem;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.o_report_layout_custom_erplibre {
+    h2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 180px;
+        height: 10rem;
+        padding: 1rem;
+        background: var(--teal);
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    #informations {
+        display: flex;
+        flex-direction: column-reverse;
+        float: right;
+        width: 50%;
+        max-width: 250px;
+        text-align: center;
+        margin-top: 0 !important;
+
+        p {
+            border-top: 1px solid var(--black);
+        }
+    }
+    .address {
+        width: 100%;
+
+        div[name="address"] {
+            margin-left: 0 !important;
+        }
+    }
+
+    thead {
+        background: var(--teal);
+    }
+
+    .invoice_tbody td {
+        border: 1px solid var(--light-grey);
+    }
+
+    .invoice_tbody tr:nth-child(odd) {
+        background-color: var(--light);
     }
 }
