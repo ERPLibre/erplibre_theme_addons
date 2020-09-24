@@ -4,6 +4,7 @@
     <template id="report_invoice_document_custom"
               name="Custom template invoice"
               inherit_id="account.report_invoice_document">
+
 <!--      <xpath expr="//t[@t-call='web.external_layout']/div[hasclass('page')]/h2/span[1]" position="replace">-->
 <!--        <span t-if="o.type == 'out_invoice' and o.state in ('open', 'in_payment', 'paid')">No. de facture</span>-->
 <!--      </xpath>-->
@@ -11,21 +12,25 @@
 <!--        <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice :)</span>-->
 <!--      </xpath>-->
 
-      <xpath expr="//*[@id='informations']/div[1]" position="before">
-        <div class="col-auto mw-100 mb-2" t-if="o.payment_term_id" name="payment_term">
-          <i><span t-field="o.payment_term_id.note"/></i>
-        </div>
-      </xpath>
+          <xpath expr="//*[@id='informations']/div[1]" position="before">
+            <div class="col-auto mw-100 mb-2" t-if="o.payment_term_id" name="payment_term">
+              <i><span t-field="o.payment_term_id.note"/></i>
+            </div>
+          </xpath>
 
-      <xpath expr="//*[@id='informations']" position="after">
-        <t t-call="web.address_layout"/>
-      </xpath>
+          <xpath expr="//*[@id='informations']" position="after">
+            <t t-call="web.address_layout"/>
+          </xpath>
 
-      <xpath expr="//t[@t-call='web.external_layout']">
-        <div class="invoice-footer">
-          <p>place footer info here</p>
-        </div>
-      </xpath>
+          <xpath expr="//t[@t-call='web.external_layout']">
+            <div class="invoice-footer">
+              <p>place footer info here</p>
+            </div>
+          </xpath>
+
+<!--      <xpath expr="//t[@t-call='web.external_layout']" position="attributes">-->
+<!--          <attribute name="t-call">web.basic_layout</attribute>-->
+<!--      </xpath>-->
     </template>
   </data>
 </odoo>

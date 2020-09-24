@@ -3,15 +3,6 @@
 // ------------------------------------------------------------------
 @import url('https://fonts.googleapis.com/css2?family=Geo&display=swap');
 
-:root {
-    --teal: #55D7D1;
-    --grey: #7F7F7F;
-    --light-grey: #BFBFBF;
-    --light: #F3F3F3;
-    --black: #000;
-    --white: #FFF;
-}
-
 .o_custom_erplibre_header,
 .o_report_layout_custom_erplibre,
 .o_custom_erplibre_footer {
@@ -22,7 +13,9 @@
         margin: 0;
     }
 }
-
+//$o-brand-odoo
+//o-brand-primary
+//$o-brand-secondary
 .o_custom_erplibre_header {
     @at-root .container {
         max-width: 100%;
@@ -39,8 +32,8 @@
     @at-root .header {
         grid-column: 1 / 1;
         grid-row: 2 / 2;
-        background: var(--grey);
-        color: var(--white);
+        background-color: darken($o-brand-secondary, 25%);
+        color: white;
     }
     @at-root .o_report_layout_custom_erplibre {
         grid-column: 2 / 2;
@@ -49,8 +42,8 @@
     @at-root .o_custom_erplibre_footer {
         grid-column: 1 / 1;
         grid-row: 3 / 3;
-        background: var(--grey);
-        color: var(--white);
+        background-color: darken($o-brand-secondary, 25%);
+        color: white;
         display: flex;
         align-items: flex-end;
     }
@@ -73,7 +66,7 @@
         width: 180px;
         height: 10rem;
         padding: 1rem;
-        background: var(--teal);
+        background: $o-brand-primary;
         display: flex;
         align-items: center;
         text-align: center;
@@ -88,7 +81,7 @@
         margin-top: 0 !important;
 
         p {
-            border-top: 1px solid var(--black);
+            border-top: 1px solid black;
         }
     }
     .address {
@@ -100,14 +93,14 @@
     }
 
     thead {
-        background: var(--teal);
+        background: $o-brand-primary;
     }
 
     .invoice_tbody td {
-        border: 1px solid var(--light-grey);
+        border: 1px solid darken($o-brand-secondary, 15%);
     }
 
     .invoice_tbody tr:nth-child(odd) {
-        background-color: var(--light);
+        background-color: $o-brand-secondary;
     }
 }
