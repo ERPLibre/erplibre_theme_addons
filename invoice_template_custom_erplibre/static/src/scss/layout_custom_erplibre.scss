@@ -7,64 +7,74 @@
 .o_report_layout_custom_erplibre,
 .o_custom_erplibre_footer {
     font-family: 'Geo', sans-serif;
-
     p {
         padding: 0;
         margin: 0;
     }
 }
-//$o-brand-odoo
-//o-brand-primary
-//$o-brand-secondary
-.o_custom_erplibre_header {
-    @at-root .container {
-        max-width: 100%;
+.custom_erplibre_layout {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    grid-template-rows: 180px 1fr;
+    & > * {
+        padding: 1rem;
+    }
+    .header {
+        grid-column: 1 / 1;
+        grid-row: 2 / -1;
         padding: 0;
         margin: 0 ;
-        display: grid;
-        grid-template-columns: 180px 1fr;
-        grid-template-rows: 10rem 1fr 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: darken($o-brand-secondary, 25%);
+        color: white;
 
         & > * {
             padding: 1rem;
         }
     }
-    @at-root .header {
-        grid-column: 1 / 1;
-        grid-row: 2 / 2;
-        background-color: darken($o-brand-secondary, 25%);
-        color: white;
-    }
-    @at-root .o_report_layout_custom_erplibre {
-        grid-column: 2 / 2;
-        grid-row: 1 / -1;
-    }
-    @at-root .o_custom_erplibre_footer {
-        grid-column: 1 / 1;
-        grid-row: 3 / 3;
-        background-color: darken($o-brand-secondary, 25%);
-        color: white;
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .img-logo {
+    .header-logo {
         width: 100%;
-        margin-bottom: 3rem;
-
         img {
             width: 100%;
         }
     }
+    ul.header-info {
+        margin: 3rem 1rem;
+        text-align: center;
+        list-style: none;
+        padding: 0;
+        li {
+            padding: 0;
+            margin: 0;
+        }
+    }
 }
-
+.o_custom_erplibre_header {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.o_custom_erplibre_footer {
+    background-color: darken($o-brand-secondary, 25%);
+    color: white;
+    display: flex;
+    align-items: flex-end;
+}
 .o_report_layout_custom_erplibre {
+    grid-column: 2 / 2;
+    grid-row: 1 / -1;
+
     h2 {
         position: absolute;
         top: 0;
         left: 0;
         width: 180px;
-        height: 10rem;
+        height: 180px;
         padding: 1rem;
         background: $o-brand-primary;
         display: flex;
@@ -91,7 +101,6 @@
             margin-left: 0 !important;
         }
     }
-
     thead {
         background: $o-brand-primary;
     }
