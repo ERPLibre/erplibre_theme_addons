@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <!-- Assets for reports -->
+
+<!--   Assets for reports-->
   <template id="report_assets_custom_erplibre" inherit_id="web.report_assets_common">
     <xpath expr="//link[last()]">
       <link rel="stylesheet" type="text/scss"
@@ -8,56 +9,57 @@
     </xpath>
   </template>
 
-  <!--  view: external_layout_custom_erplibre -->
-  <template id="external_layout_custom_erplibre">
-      <div class="header">
-          <div class="o_custom_erplibre_header">
-              <div class="header-logo">
-                  <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
-              </div>
 
-              <ul class="header-info" name="company_address">
-                  <li t-if="company.name"><strong><span t-field="company.name"/></strong></li>
-<!--                  <li class="tagline" t-field="company.report_header" />-->
-                  <li>
-                      <span class="company_address"
-                            t-field="company.partner_id"
-                            t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
-                  </li>
-                  <li t-if="company.vat"><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
-                  <li t-if="company.phone">Tel: <span t-field="company.phone"/></li>
-                  <li t-if="company.email"><span t-field="company.email"/></li>
-                  <li t-if="company.website"><span t-field="company.website"/></li>
-              </ul>
+    <template id="report_layout_custom" inherit_id="web.report_layout">
+<!-- TODO add conditional on the company.external_report_layout_id.key == 'invoice_template_custom_erplibre.external_layout_custom_erplibre' -->
+        <xpath expr="//body/div[@id='wrapwrap']/main" position="attributes">
+            <attribute name="style">margin: 0; padding: 0; max-width: 100%;</attribute>
+        </xpath>
+    </template>
 
-              <div class="o_custom_erplibre_footer">
-                  <p><span t-field="company.report_footer"/></p>
+<!--    clean clone-->
+    <template id="external_layout_custom_erplibre">
+<!--                <t t-set="full_width" t-value="True"/>-->
 
-                  <ul t-if="report_type == 'pdf'" class="list-inline pagenumber">
-                      <li class="list-inline-item"><strong><span class="page"/></strong></li>
-                  </ul>
-              </div>
+        <div class="article o_report_layout_custom"  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <div class="o_header_custom">
+                <div class="header_custom--logo">
+                    <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
+                </div>
+                <ul class="header_custom--info" name="company_address">
+                    <strong><li t-if="company.name"><span t-field="company.name"/></li></strong>
+                    <li>
+                        <span class="company_address"
+                              t-field="company.partner_id"
+                              t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
+                    </li>
 
-          </div>
-          <script>
-              const addClassToLayout = () => {
-                const targetLayout = document.querySelector('.o_report_layout_custom_erplibre');
-                console.log(targetLayout);
-                if (targetLayout) {
-                  const wrapper = document.getElementById('wrapwrap');
-                  const container = wrapper.querySelector('.container');
-                  container.classList.add('custom_erplibre_layout');
-                }
-              }
-              setTimeout(addClassToLayout, 1000)
+                    <li t-if="company.vat"><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+                    <li t-if="company.phone">Tel: <span t-field="company.phone"/></li>
+                    <li t-if="company.email"><span t-field="company.email"/></li>
+                    <li t-if="company.website"><span t-field="company.website"/></li>
+                </ul>
+<!--                        <span t-field="company.report_footer"/>-->
+<!--                        <h4 class="mt0 mb0 text-uppercase" t-field="company.report_header"/>-->
+            </div>
 
-          </script>
-      </div>
+            <div class="layout_custom--content">
+<!--                <t t-call="web.address_layout"/>-->
+                <t t-raw="0"/>
+            </div>
 
-      <div class="article o_report_layout_custom_erplibre"  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
-<!--          <t t-call="web.address_layout"/>-->
-          <t t-raw="0"/>
-      </div>
+        </div>
 
-  </template>
+        <div class="footer">
+            <ul t-if="report_type == 'pdf'" class="list-inline pagenumber float-left text-center" style="border: 0">
+                <li class="list-inline-item">
+                    <strong>
+                        <span>page# </span>
+                        <span class="page"/>
+                    </strong>
+                </li>
+            </ul>
+        </div>
+    </template>
+
 </odoo>
