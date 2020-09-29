@@ -37,16 +37,11 @@
 
         <!-- remove conditional display -->
         <xpath expr="//t[@name='account_invoice_line_accountable']/td[4]" position="attributes">
-            <attribute name="t-attf-class"></attribute>
+            <attribute name="t-attf-class">text-right</attribute>
         </xpath>
 
         <!-- remove tax column -->
         <xpath expr="//t[@name='account_invoice_line_accountable']/td[6]" position="replace">
-        </xpath>
-
-        <!-- add address -->
-        <xpath expr="//*[@id='informations']" position="after">
-            <t t-call="web.address_layout"/>
         </xpath>
 
         <!-- placeholder TODO: add needed info -->
