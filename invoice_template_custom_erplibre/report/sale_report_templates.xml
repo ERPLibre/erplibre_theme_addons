@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document_custom"
+              inherit_id="sale.report_saleorder_document">
+
+        <!-- update doc title -->
+        <xpath expr="//div[@class='page']/h2" position="replace">
+                <h2>
+                    <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+                        <span t-if="doc.state not in ['draft','sent']">Order</span>
+                        <span t-if="doc.state in ['draft','sent']">Quotation</span>
+                    </t>
+                    <t t-if="env.context.get('proforma', False) or is_pro_forma">
+                        <span>Pro-Forma Invoice</span>
+                    </t>
+                </h2>
+        </xpath>
+
+        <!-- add colgroup-->
+        <xpath expr="//table[hasclass('o_main_table')]/thead" position="before">
+            <colgroup>
+                <col span="1" style="width: 40%;" />
+                <col span="1" style="width: 20%;" />
+                <col span="1" style="width: 20%;" />
+                <col span="1" style="width: 20%;" />
+            </colgroup>
+        </xpath>
+
+        <!-- set wanted columns header -->
+        <xpath expr="//table[hasclass('o_main_table')]/thead/tr" position="replace">
+            <tr>
+                <th>description</th>
+                <th>qte</th>
+                <th>unit price</th>
+                <th>total</th>
+            </tr>
+        </xpath>
+
+        <!-- remove tax column -->
+        <xpath expr="//tbody[@class='sale_tbody']/t[2]/tr[1]/t[1]/td[5]" position="replace">
+        </xpath>
+
+    </template>
+</odoo>
