@@ -24,7 +24,7 @@
 .o_header_custom {
     margin-top: 180px;
     width: 180px;
-    height: 1030px;
+    height: 273.5mm;
     padding: 1rem;
     background-color: darken($o-brand-secondary, 25%);
     display: flex;
@@ -62,11 +62,19 @@
         height: 180px;
         background: $o-brand-primary;
         margin: 0;
-        padding: 1rem;
+        padding: 0 1rem;
+        display: table;
 
-        display: flex;
-        align-items: center;
-        text-align: center;
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            height: 180px;
+        }
+
+        //display: flex;
+        //align-items: center;
+        //text-align: center;
     }
 
     #informations {

@@ -12,7 +12,7 @@
 <!--        <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice :)</span>-->
 <!--      </xpath>-->
 
-          <xpath expr="//*[@id='informations']/div[1]" position="before">
+          <xpath expr="//*[@id='informations']/div[last()]" position="after">
             <div class="col-auto mw-100 mb-2" t-if="o.payment_term_id" name="payment_term">
               <i><span t-field="o.payment_term_id.note"/></i>
             </div>
