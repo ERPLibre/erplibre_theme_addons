@@ -5,32 +5,57 @@
               name="Custom template invoice"
               inherit_id="account.report_invoice_document">
 
-<!--      <xpath expr="//t[@t-call='web.external_layout']/div[hasclass('page')]/h2/span[1]" position="replace">-->
-<!--        <span t-if="o.type == 'out_invoice' and o.state in ('open', 'in_payment', 'paid')">No. de facture</span>-->
-<!--      </xpath>-->
-<!--      <xpath expr="//t[@t-call='web.external_layout']/div[hasclass('page')]/h2/span[contains(text(), 'Draft Invoice')]" position="replace">-->
-<!--        <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice :)</span>-->
-<!--      </xpath>-->
-
-          <xpath expr="//*[@id='informations']/div[last()]" position="after">
+        <!-- add payment terms-->
+        <xpath expr="//*[@id='informations']/div[last()]" position="after">
             <div class="col-auto mw-100 mb-2" t-if="o.payment_term_id" name="payment_term">
-              <i><span t-field="o.payment_term_id.note"/></i>
+                <i><span t-field="o.payment_term_id.note"/></i>
             </div>
-          </xpath>
+        </xpath>
+        <!-- remove the invoice number in h2-->
+        <xpath expr="//div[@class='page']/h2/span[last()]" position="replace">
+        </xpath>
 
-          <xpath expr="//*[@id='informations']" position="after">
+        <!-- add colgroup-->
+        <xpath expr="//table[@name='invoice_line_table']/thead" position="before">
+            <colgroup>
+                <col span="1" style="width: 40%;" />
+                <col span="1" style="width: 20%;" />
+                <col span="1" style="width: 20%;" />
+                <col span="1" style="width: 20%;" />
+            </colgroup>
+        </xpath>
+
+        <!-- set wanted columns header -->
+        <xpath expr="//table[@name='invoice_line_table']/thead/tr" position="replace">
+            <tr>
+                <th>description</th>
+                <th>qte</th>
+                <th>unit price</th>
+                <th>total</th>
+            </tr>
+        </xpath>
+
+        <!-- remove conditional display -->
+        <xpath expr="//t[@name='account_invoice_line_accountable']/td[4]" position="attributes">
+            <attribute name="t-attf-class"></attribute>
+        </xpath>
+
+        <!-- remove tax column -->
+        <xpath expr="//t[@name='account_invoice_line_accountable']/td[6]" position="replace">
+        </xpath>
+
+        <!-- add address -->
+        <xpath expr="//*[@id='informations']" position="after">
             <t t-call="web.address_layout"/>
-          </xpath>
+        </xpath>
 
-          <xpath expr="//t[@t-call='web.external_layout']">
+        <!-- placeholder TODO: add needed info -->
+        <xpath expr="//t[@t-call='web.external_layout']">
             <div class="invoice-footer">
-              <p>place footer info here</p>
+                <p>place footer info here</p>
             </div>
-          </xpath>
+        </xpath>
 
-<!--      <xpath expr="//t[@t-call='web.external_layout']" position="attributes">-->
-<!--          <attribute name="t-call">web.basic_layout</attribute>-->
-<!--      </xpath>-->
     </template>
   </data>
 </odoo>

@@ -12,19 +12,18 @@
     position: relative;
 }
 .pagenumber {
-    width: 180px;
+    width: 25%;
     background-color: darken($o-brand-secondary, 25%);
     color: white;
-    //padding-bottom: 12px;
     p {
         margin-bottom: 0;
     }
 }
 
 .o_header_custom {
-    margin-top: 180px;
-    width: 180px;
-    height: 273.5mm;
+    margin-top: 48mm;
+    width: 25%;
+    min-height: 273.55mm;
     padding: 1rem;
     background-color: darken($o-brand-secondary, 25%);
     display: flex;
@@ -33,9 +32,9 @@
 
     .header_custom--logo {
         width: 100%;
+
         img {
             width: 100%;
-            //max-height: a;
         }
     }
     .header_custom--info {
@@ -51,15 +50,23 @@
 }
 .o_report_layout_custom .layout_custom--content {
     padding: 1rem;
-    margin-top: 180px;
-    width: 750px;
+    margin-top: 48mm;
+    width: 75%;
 
+    table {
+        table-layout: fixed;
+        width:100%;
+    }
+    th {
+        text-align: center;
+        text-transform: uppercase;
+    }
     h2 {
         position: absolute;
         top: 0;
         left: 0;
-        width: 180px;
-        height: 180px;
+        width: 25%;
+        max-width: 25%;
         background: $o-brand-primary;
         margin: 0;
         padding: 0 1rem;
@@ -69,12 +76,8 @@
             display: table-cell;
             vertical-align: middle;
             text-align: center;
-            height: 180px;
+            height: 48mm;
         }
-
-        //display: flex;
-        //align-items: center;
-        //text-align: center;
     }
 
     #informations {
