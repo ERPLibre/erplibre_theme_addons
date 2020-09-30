@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-<!--   Assets for reports-->
-  <template id="report_assets_custom_erplibre" inherit_id="web.report_assets_common">
-    <xpath expr="//link[last()]">
-      <link rel="stylesheet" type="text/scss"
-            href="/invoice_template_custom_erplibre/static/src/scss/layout_custom_erplibre.scss"/>
-    </xpath>
-  </template>
+    <!-- Assets for reports -->
+    <template id="report_assets_custom_erplibre" inherit_id="web.report_assets_common">
+        <xpath expr="//link[last()]">
+            <link rel="stylesheet" type="text/scss"
+                  href="/invoice_template_custom_erplibre/static/src/scss/layout_custom_erplibre.scss"/>
+        </xpath>
+    </template>
 
+    <!-- Adapt address layout -->
+    <template id="address_layout_custom" inherit_id="web.address_layout">
+        <xpath expr="//div[@name='address']" position="before">
+            <t t-set="colclass" t-value="'col-6'"/>
+        </xpath>
+        <xpath expr="//div[@name='address']/t[1]" position="before">
+            <strong>Customer address:</strong>
+        </xpath>
+    </template>
 
     <template id="report_layout_custom" inherit_id="web.report_layout">
-<!-- TODO add conditional on the company.external_report_layout_id.key == 'invoice_template_custom_erplibre.external_layout_custom_erplibre' -->
+    <!-- TODO: add conditional on the company.external_report_layout_id.key == 'invoice_template_custom_erplibre.external_layout_custom_erplibre' -->
         <xpath expr="//body/div[@id='wrapwrap']/main" position="attributes">
             <attribute name="style">margin: 0; padding: 0; max-width: 100%;</attribute>
         </xpath>

@@ -45,11 +45,11 @@
         </xpath>
 
         <!-- placeholder TODO: add needed info -->
-        <xpath expr="//t[@t-call='web.external_layout']">
-            <div class="invoice-footer">
-                <p>place footer info here</p>
-            </div>
-        </xpath>
+<!--        <xpath expr="//t[@t-call='web.external_layout']">-->
+<!--            <div class="invoice-footer">-->
+<!--                <p>place footer info here</p>-->
+<!--            </div>-->
+<!--        </xpath>-->
 
     </template>
   </data>
