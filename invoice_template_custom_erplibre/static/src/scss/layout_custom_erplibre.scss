@@ -19,7 +19,6 @@
         margin-bottom: 0;
     }
 }
-
 .o_header_custom {
     margin-top: 48mm;
     width: 25%;
@@ -33,7 +32,6 @@
 
     .header_custom--logo {
         width: 100%;
-
         img {
             width: 100%;
         }
@@ -72,7 +70,6 @@
         margin: 0;
         padding: 0 1rem;
         display: table;
-
         span {
             display: table-cell;
             vertical-align: middle;
@@ -80,24 +77,19 @@
             height: 48mm;
         }
     }
-
     #informations {
         position: absolute;
         top: 0;
         right: 0;
         padding: 1rem;
-
         display: flex;
         flex-direction: column;
-
         text-align: center;
         margin-top: 0 !important;
-
         p {
             border-top: 1px solid black;
         }
     }
-
     .address {
         width: 100%;
         padding: 1rem 0;
@@ -109,10 +101,18 @@
     thead {
         background: $o-brand-primary;
     }
+    // invoice table
     .invoice_tbody td {
         border: 1px solid darken($o-brand-secondary, 15%);
     }
     .invoice_tbody tr:nth-child(odd) {
+        background-color: $o-brand-secondary;
+    }
+    // sale order table
+    .sale_tbody td {
+        border: 1px solid darken($o-brand-secondary, 15%);
+    }
+    .sale_tbody tr:nth-child(odd) {
         background-color: $o-brand-secondary;
     }
 }
