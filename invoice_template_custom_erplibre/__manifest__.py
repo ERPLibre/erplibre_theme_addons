@@ -13,12 +13,14 @@ invoice template custom erplibre
         'account',
         'web',
         'sale',
+        'mail',
     ],
     'data': [
         'views/report_invoice.xml',
         'views/report_templates.xml',
         'data/report_layout.xml',
         'report/sale_report_templates.xml',
+        'data/mail_data.xml',
     ],
     "auto_install": False,
 }
