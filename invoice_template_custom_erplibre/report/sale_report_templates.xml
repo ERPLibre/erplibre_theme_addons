@@ -29,7 +29,7 @@
         <!-- set wanted columns header -->
         <xpath expr="//table[hasclass('o_main_table')]/thead/tr" position="replace">
             <tr>
-                <th>description</th>
+                <th>description <t t-esc="doc.retourne_patate()"/></th>
                 <th>qte</th>
                 <th>unit price</th>
                 <th>total</th>
@@ -37,8 +37,7 @@
         </xpath>
 
         <!-- remove tax column -->
-        <xpath expr="//tbody[@class='sale_tbody']/t[2]/tr[1]/t[1]/td[5]" position="replace">
-        </xpath>
+        <xpath expr="//tbody[@class='sale_tbody']/t[2]/tr[1]/t[1]/td[5]" position="replace"/>
 
     </template>
 </odoo>
