@@ -29,7 +29,7 @@
         <!-- set wanted columns header -->
         <xpath expr="//table[hasclass('o_main_table')]/thead/tr" position="replace">
             <tr>
-                <th>description <t t-esc="doc.retourne_patate()"/></th>
+                <th>description</th>
                 <th>qte</th>
                 <th>unit price</th>
                 <th>total</th>
