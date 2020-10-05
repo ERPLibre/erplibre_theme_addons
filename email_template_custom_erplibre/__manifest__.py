@@ -11,6 +11,8 @@ email template custom erplibre
     """,
     'depends': [
         'mail',
+        # Muk
+        # 'muk_web_theme',
     ],
     'data': [
         'data/mail_data.xml',

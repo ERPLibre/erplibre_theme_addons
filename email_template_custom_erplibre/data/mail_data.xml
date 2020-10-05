@@ -5,6 +5,13 @@
                   name="Mail: Pay Now mail notification template - custom"
                   inherit_id="mail.mail_notification_paynow">
 
+            <xpath expr="//tbody" position="before">
+                <t t-set="primary_color" t-value="record.env['ir.config_parameter'].sudo().get_param('email_template_custom_erplibre.theme_color_primary')"/>
+            </xpath>
+
+            <xpath expr="//tbody/tr[2]/td/div[1]/a" position="inside">
+                <span><t t-esc="primary_color"></t></span>
+            </xpath>
             <xpath expr="//tbody/tr[2]/td/div[1]/a" position="attributes">
             <!-- original: style="background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;" -->
                 <attribute name="style">background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;</attribute>
