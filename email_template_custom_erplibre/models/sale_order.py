@@ -1,24 +1,35 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from odoo import api, fields, models
 
+XML_ID = "muk_web_theme._assets_primary_variables"
+SCSS_URL = "/muk_web_theme/static/src/scss/colors.scss"
+
 
 class SaleOrder(models.Model):
     _inherit = 'sale.order'
 
+    @api.model
     def get_theme_color(self, field_name='theme_color_primary'):
-        theme_color_fields = [
-            {'name': 'theme_color_brand', 'default': "#243742"},
-            {'name': 'theme_color_primary', 'default': "#5D8DA8"},
-            {'name': 'theme_color_required', 'default': "#d1dfe6"},
-            {'name': 'theme_color_menu', 'default': "#f8f9fa"},
-            {'name': 'theme_color_appbar_color', 'default': "#dee2e6"},
-            {'name': 'theme_color_appbar_background', 'default': "#000000"},
+        variables = [
+            'o-brand-odoo',
+            'o-brand-primary',
+            'mk-required-color',
+            'mk-apps-color',
+            'mk-appbar-color',
+            'mk-appbar-background',
         ]
 
-        color_dict = next(field for field in theme_color_fields if field['name'] == field_name)
-        default_color = color_dict['default']
+        colors = self.env['muk_utils.scss_editor'].get_values(
+            SCSS_URL, XML_ID, variables
+        )
 
-        res = self.env['ir.config_parameter'].sudo().get_param(
-            'muk_web_theme.{name}'.format(name=field_name), default=default_color)
+        dict_colors = {
+            'theme_color_brand': colors['o-brand-odoo'],
+            'theme_color_primary': colors['o-brand-primary'],
+            'theme_color_required': colors['mk-required-color'],
+            'theme_color_menu': colors['mk-apps-color'],
+            'theme_color_appbar_color': colors['mk-appbar-color'],
+            'theme_color_appbar_background': colors['mk-appbar-background'],
+        }
 
-        return res
+        return dict_colors.get(field_name, '#5D8DA8')
