@@ -11,6 +11,8 @@ email template custom erplibre
     """,
     'depends': [
         'mail',
+        'sale',
+
         # Muk
         'muk_web_theme',
     ],

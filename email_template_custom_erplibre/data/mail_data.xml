@@ -6,8 +6,7 @@
                   inherit_id="mail.mail_notification_paynow">
 
             <xpath expr="//tbody" position="before">
-                <t t-set="brand_color" t-value="record.get_theme_color_brand()"/>
-                <t t-set="primary_color" t-value="record.get_theme_color_primary()"/>
+                <t t-set="primary_color" t-value="record.get_theme_color()"/>
             </xpath>
 
             <xpath expr="//tbody/tr[2]/td/div[1]/a" position="inside">
