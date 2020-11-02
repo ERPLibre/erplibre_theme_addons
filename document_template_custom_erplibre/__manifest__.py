@@ -1,12 +1,12 @@
 
 {
-    'name': 'invoice template custom erplibre',
+    'name': 'document template custom erplibre',
     'author': 'TechnoLibre',
     'website': 'https://technolibre.ca',
     'category': 'Other',
     'description': """
-invoice template custom erplibre
-================================
+document template custom erplibre
+=================================
 
     """,
     'depends': [
@@ -17,6 +17,7 @@ invoice template custom erplibre
     'data': [
         'views/report_invoice.xml',
         'views/report_templates.xml',
+        'report/report_paperformat.xml',
         'data/report_layout.xml',
         'report/sale_report_templates.xml',
     ],

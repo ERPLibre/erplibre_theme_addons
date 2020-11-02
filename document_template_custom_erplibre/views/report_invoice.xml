@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <data>
-    <template id="report_invoice_document_custom"
+    <template id="report_invoice_document_custom_erplibre"
               name="Custom template invoice"
               inherit_id="account.report_invoice_document">
 
@@ -43,16 +43,6 @@
         <!-- remove tax column -->
         <xpath expr="//t[@name='account_invoice_line_accountable']/td[6]" position="replace">
         </xpath>
-
-        <!-- add bank info if exist -->
-<!--        <xpath expr="//t[@t-call='web.external_layout']">-->
-<!--            <ul class="invoice-footer">-->
-<!--                <li t-if="manual_name"><span t-esc="manual_name"/></li>-->
-<!--                <li t-if="journal_name"><span t-esc="journal_name"/></li>-->
-<!--                <li t-if="acc_number"><span t-esc="acc_number"/></li>-->
-<!--                <li t-if="manual_post_msg"><span t-esc="manual_post_msg"/></li>-->
-<!--            </ul>-->
-<!--        </xpath>-->
 
     </template>
   </data>
