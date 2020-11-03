@@ -36,8 +36,21 @@
             </tr>
         </xpath>
 
-        <!-- remove tax column -->
-        <xpath expr="//tbody[@class='sale_tbody']/t[2]/tr[1]/t[1]/td[5]" position="replace"/>
+        <!-- remove tax & discount column -->
+        <xpath expr="//tbody[@class='sale_tbody']/t[2]/tr[1]/t[1]" position="replace">
+            <td><span t-field="line.name"/></td>
+            <td class="text-right">
+                <span t-field="line.product_uom_qty"/>
+                <span t-field="line.product_uom" groups="uom.group_uom"/>
+            </td>
+            <td class="text-right">
+                <span t-field="line.price_unit"/>
+            </td>
+            <td class="text-right o_price_total">
+                <span t-field="line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
+                <span t-field="line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
+            </td>
+        </xpath>
 
     </template>
 </odoo>

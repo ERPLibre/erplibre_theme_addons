@@ -1,11 +1,15 @@
 @font-face {
     font-family: 'URWGeometric';
-    src: url('../fonts/URWGeometric-Regular.woff') format('woff'),
-         url('../fonts/URWGeometric-Regular.ttf') format('truetype');
+    src: url('../fonts/URWGeometric-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
-
+@font-face {
+    font-family: 'URWGeometric';
+    src: url('../fonts/URWGeometric-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 .o_report_layout_custom {
     font-family: URWGeometric, sans-serif;

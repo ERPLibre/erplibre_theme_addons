@@ -41,8 +41,7 @@
         </xpath>
 
         <!-- remove tax column -->
-        <xpath expr="//t[@name='account_invoice_line_accountable']/td[6]" position="replace">
-        </xpath>
+        <xpath expr="//t[@name='account_invoice_line_accountable']/td[6]" position="replace"/>
 
     </template>
   </data>
