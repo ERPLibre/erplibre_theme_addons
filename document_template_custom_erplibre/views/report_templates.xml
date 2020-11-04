@@ -14,7 +14,7 @@
             <t t-set="colclass" t-value="'col-6'"/>
         </xpath>
         <xpath expr="//div[@name='address']/t[1]" position="before">
-            <strong>Adresse du client:</strong>
+            <strong>Customer Address:</strong>
         </xpath>
     </template>
 

@@ -1,3 +1,4 @@
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
     'name': 'document template custom erplibre',
@@ -22,4 +23,5 @@ document template custom erplibre
         'report/sale_report_templates.xml',
     ],
     "auto_install": False,
+    "post_init_hook": "post_init_hook",
 }
