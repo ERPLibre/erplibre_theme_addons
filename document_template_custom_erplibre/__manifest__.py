@@ -8,6 +8,8 @@
     'description': """
 document template custom erplibre
 =================================
+for best result with PDF generation, please set the paper format to US Letter (custom erplibre)
+Setting > General Parameters > Format > (dropdown) US Letter (custom erplibre) > Save
 
     """,
     'depends': [
@@ -23,5 +25,4 @@ document template custom erplibre
         'report/sale_report_templates.xml',
     ],
     "auto_install": False,
-    "post_init_hook": "post_init_hook",
 }

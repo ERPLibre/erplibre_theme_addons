@@ -16,6 +16,17 @@
             </h2>
         </xpath>
 
+        <!-- format date fields (remove time)-->
+        <xpath expr="//p[@t-field='doc.confirmation_date']" position="replace">
+            <p class="m-0" t-esc="doc.confirmation_date.strftime('%d/%m/%Y')"/>
+        </xpath>
+        <xpath expr="//p[@t-field='doc.date_order']" position="replace">
+            <p class="m-0" t-esc="doc.date_order.strftime('%d/%m/%Y')"/>
+        </xpath>
+        <xpath expr="//p[@t-field='doc.validity_date']" position="replace">
+            <p class="m-0" t-esc="doc.validity_date.strftime('%d/%m/%Y')"/>
+        </xpath>
+
         <!-- add colgroup-->
         <xpath expr="//table[hasclass('o_main_table')]/thead" position="before">
             <colgroup>
