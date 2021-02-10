@@ -4,43 +4,113 @@
   <!-- Snippets -->
   <template id="s_avatar" name="Avatar">
     <div class="o_avatar">
-      <img class="img img-fluid mx-auto" src="/erplibre_website_snippets/static/src/img/avatar.png" alt="Avatar"/>
+      <img class="img img-fluid mx-auto" src="/erplibre_website_snippets/static/src/img/portrait.png" alt="Avatar"/>
     </div>
   </template>
+
   <template id="s_image" name="Image">
     <div class="o_image">
-      <img class="img img-fluid" src="/erplibre_website_snippets/static/src/img/image.png" alt="Image"/>
+      <img class="img img-fluid" src="/web/image/website.s_picture_default_image" alt="Image"/>
     </div>
   </template>
-  <template id="s_btn_outline" name="Btn Outline">
+
+  <template id="s_btn_outline" name="Button Outline">
     <div class="o_btn_outline text-center pt16 pb16" data-name="Buttons">
       <a href="#" class="btn btn-outline-primary">Read more</a>
     </div>
   </template>
+
+  <template id="s_bullets_finger" name="Finger Bullets">
+    <ul class="o_bullets_finger">
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+      <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+    </ul>
+  </template>
+
+  <template id="s_h1" name="h1 tag">
+    <h1 class="o_h1">ERPLibre rocks!</h1>
+  </template>
+
+  <template id="s_p" name="p tag">
+    <p class="o_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+  </template>
+  
+  <template id="s_small" name="small tag">
+    <div class="o_small">
+      <small>lil note</small>
+    </div>
+  </template>
+
+  <!-- Add snippets to menu -->
+  <template id="add_erplibre_snippet_to_menu" inherit_id="website.snippets">
+    <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
+      <t t-snippet="erplibre_website_snippets.s_avatar" t-thumbnail="/erplibre_website_snippets/static/src/img/avatar.png"/>
+      <t t-snippet="erplibre_website_snippets.s_image" t-thumbnail="/erplibre_website_snippets/static/src/img/image.png"/>
+      <t t-snippet="erplibre_website_snippets.s_btn_outline" t-thumbnail="/website/static/src/img/snippets_thumbs/s_button.png"/>
+      <t t-snippet="erplibre_website_snippets.s_bullets_finger" t-thumbnail="/website/static/src/img/snippets_thumbs/s_button.png"/>
+      <t t-snippet="erplibre_website_snippets.s_h1" t-thumbnail="/website/static/src/img/snippets_thumbs/s_title.png"/>
+      <t t-snippet="erplibre_website_snippets.s_p" t-thumbnail="/website/static/src/img/snippets_thumbs/s_title.png"/>
+      <t t-snippet="erplibre_website_snippets.s_small" t-thumbnail="/website/static/src/img/snippets_thumbs/s_title.png"/>
+    </xpath>
+  </template>
+
   <!-- Add snippets options -->
   <template id="snippet_options" inherit_id="website.snippet_options">
     <xpath expr=".">
-      <div data-selector=".o_avatar" data-drop-in=".row > div"/>
-      <div data-selector=".o_image" data-drop-in=".row > div"/>
-      <div data-selector=".o_btn_outline" data-drop-in=".row > div"/>
+      <!-- Horizontal alignment options | Screensize lg or above-->
+      <div data-selector=".o_avatar, .o_image, .o_btn_outline, .o_h1, .o_p, .o_small, .s_btn">
+        <div class="dropdown-submenu">
+          <a tabindex="-2" href="#" class="dropdown-item">
+            <i class="fa fa-align-left"/>Alignment(+=LG)</a>
+          <div class="dropdown-menu" role="menu">
+            <a href="#" class="dropdown-item" data-select-class="text-lg-left">Left</a>
+            <a href="#" class="dropdown-item" data-select-class="text-lg-center">Center</a>
+            <a href="#" class="dropdown-item" data-select-class="text-lg-right">Right</a>
+          </div>
+        </div>
+      </div>
+      <!-- Horizontal alignment options | Screensize md or below-->
+      <div data-selector=".o_avatar, .o_image, .o_btn_outline, .o_h1, .o_p, .o_small, .s_btn">
+        <div class="dropdown-submenu">
+          <a tabindex="-2" href="#" class="dropdown-item">
+            <i class="fa fa-align-left"/>Alignment(-=MD)
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <a href="#" class="dropdown-item" data-select-class="text-md-left">Left</a>
+            <a href="#" class="dropdown-item" data-select-class="text-md-center">Center</a>
+            <a href="#" class="dropdown-item" data-select-class="text-md-right">Right</a>
+          </div>
+        </div>
+      </div>
+      <!-- Vertical alignment options -->
+      <div data-js="sizing_y" data-selector="section, .row > div, :not(.o_gallery > .container) > .o_avatar, .o_image, .o_btn_outline, o_bullets_finger, .o_h1, .o_p, .o_small"/>
+
+      <!-- Hidden options based on screensize-->
+      <div data-selector=".o_image, .o_btn_outline">
+        <div class="dropdown-submenu">
+          <a tabindex="-2" href="#" class="dropdown-item">
+            <i class="fa fa-align-left"/>Visiblility
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <a href="#" class="dropdown-item" data-select-class="d-lg-none">Hidden +=LG</a>
+            <a href="#" class="dropdown-item" data-select-class="d-md-none">Hidden +=MD</a>
+            <a href="#" class="dropdown-item" data-select-class="d-md-block d-lg-none">Visible -=MD</a>
+            <a href="#" class="dropdown-item" data-select-class="d-sm-block d-md-none">Visible -=SM</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drag & drop options -->
+      <div data-js="content" data-selector=".o_avatar, .o_image, .o_btn_outline, .o_bullets_finger, .o_h1, .o_p, .o_small" data-drop-near="p, h1, h2, h3, blockquote, .s_btn, .s_card, .s_alert, .o_facebook_page, .s_share, .s_rating, .s_hr, .o_avatar, .o_image, .o_btn_outline, .o_bullets_finger, .o_h1, .o_p, .o_small" data-drop-in=".content">
+      </div>
     </xpath>
   </template>
-  <!-- Add snippets to menu -->
-  <template id="snippets" inherit_id="website.snippets">
-    <xpath expr="//div[@id='snippet_content']/div[hasclass('o_panel_body')]" position="inside">
-      <t t-snippet="erplibre_website_snippets.s_avatar"
-         t-thumbnail="/erplibre_website_snippets/static/src/img/avatar.png"/>
-      <t t-snippet="erplibre_website_snippets.s_image"
-         t-thumbnail="/erplibre_website_snippets/static/src/img/image.png"/>
-      <t t-snippet="erplibre_website_snippets.s_btn_outline"
-         t-thumbnail="/website/static/src/img/snippets_thumbs/s_button.png"/>
-    </xpath>
-  </template>
+
   <!-- Add stylesheet -->
-  <template id="assets_frontend" inherit_id="website.assets_frontend">
+  <template id="assets_frontend_erplibre_website_snippets" inherit_id="website.assets_frontend">
     <xpath expr="//link[last()]" position="after">
-      <link rel="stylesheet" type="text/scss"
-            href="/erplibre_website_snippets/static/src/scss/erplibre_website_snippets.scss"/>
+      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/erplibre_website_snippets.scss" />
     </xpath>
   </template>
 </odoo>
