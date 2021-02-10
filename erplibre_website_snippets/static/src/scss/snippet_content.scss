@@ -1,0 +1,185 @@
+// License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
+// snippet content ptions
+.top-left{
+  top: 0;
+  left: 0;
+}
+.top-right{
+  top: 0;
+  right: 0;
+}
+.bottom-left{
+  bottom: 0;
+  left: 0;
+}
+.bottom-right{
+  bottom: 0;
+  right: 0;
+}
+.absolute-center {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// snippet content
+.o_avatar {
+	img {
+		width: 150px;
+		height: 150px;
+		object-fit: cover;
+		border-radius: 50%;
+		border: 2px solid white;
+	}
+}
+
+.o_image_fluid {
+	width: 100%;
+	object-fit: cover;
+}
+
+.o_bullets_finger {
+	margin: 24px 0;
+	padding: 0;
+	list-style: none;
+	li {
+		padding: 6px 0 6px 36px;
+		text-indent: -30px;
+		font-size: 16px;
+	}
+	li::before {
+		content: "👉 ";
+	}
+}
+
+.o_pill {
+	padding: 3px 6px;
+	margin: 0 3px;
+	border-radius: 5px;
+}
+
+// Flip card
+.o_card_flip {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 450px;
+	min-width: 320px;
+	max-width: 360px;
+	transition: all 0.5s;
+	opacity: 0.9;
+
+	.o_avatar img {
+		width: 200px;
+		height: 200px;
+		margin-top: 72px;
+		overflow: hidden;
+	}
+	.card-flip__title {
+		position: absolute;
+		top: 12px;
+		right: 24px;
+		font-size: 18px;
+	}
+	.card-flip__name {
+		margin-top: 24px;
+		margin-bottom: 12px;
+		text-align: center;
+		padding: 0 20px;
+		font-weight: 700;
+	}
+	.card-flip__bio {
+		display: none;
+		text-align: center;
+		margin: 0 20px;
+	}
+	.card-flip__icons {
+		position: absolute;
+		bottom: 24px;
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+
+		i {
+			font-size: 36px;
+			transition: all 0.5s;
+		}
+	}
+	// Hover effect
+	&:hover {
+		opacity: 1;
+	}
+	&:hover .o_avatar,
+	&:active .o_avatar {
+		display: none;
+	}
+	&:hover .card-flip__title,
+	&:active .card-flip__title {
+		position: relative;
+		top: auto;
+		right: auto;
+		margin-top: 0;
+	}
+	&:hover .card-flip__bio,
+	&:active .card-flip__bio {
+		display: block;
+	}
+}
+
+.o_card_extend {
+	overflow: hidden;
+	height: min-content;
+	min-width: 320px;
+	max-width: 360px;
+
+	.o_image_fluid {
+		overflow: hidden;
+		height: 220px;
+		img {
+			width: 100%;
+		}
+	}
+	.card-extend__text {
+		padding: 12px;
+
+		.card-extend__title {
+			display: flex;
+			align-items: center
+		}
+		img {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			margin-right: 8px;
+		}
+		h4 {
+				margin: 0;
+				white-space: nowrap;
+		}
+		p {
+				margin-top: 12px;
+		}
+	}
+}
+
+@media (min-width: 720px) {
+	.o_card_extend {
+		p {
+			margin: 0;
+			transition: opacity 0.5s ease-out;
+			opacity: 0;
+			height: 0;
+			overflow: hidden;
+		}
+	
+		&:hover p,
+		&:active p {
+			opacity: 1;
+			height: auto;
+			margin-top: 1rem;
+		}
+	}
+}

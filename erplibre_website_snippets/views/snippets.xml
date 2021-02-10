@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
-  <!-- Snippets -->
+  <!-- Snippet Content-->
   <template id="s_avatar" name="Avatar">
     <div class="o_avatar">
-      <img class="img img-fluid mx-auto" src="/erplibre_website_snippets/static/src/img/portrait.png" alt="Avatar"/>
+      <img class="img img-fluid" src="/erplibre_website_snippets/static/src/img/portrait.png" alt="Avatar"/>
     </div>
   </template>
 
   <template id="s_image" name="Image">
-    <div class="o_image">
-      <img class="img img-fluid" src="/web/image/website.s_picture_default_image" alt="Image"/>
-    </div>
+      <img class="o_image_fluid img img-fluid" src="/web/image/website.s_picture_default_image" alt="Image"/>
   </template>
 
   <template id="s_btn_outline" name="Button Outline">
@@ -28,30 +26,152 @@
     </ul>
   </template>
 
+  <template id="s_card_extend" name="Extendable Card">
+    <div class="o_card_extend">
+      <div class="o_image_fluid">
+        <img class="img img-fluid" src="/web/image/website.s_picture_default_image" alt="Product illustration"/>
+      </div>
+      <div class="card-extend__text">
+        <div class="card-extend__title">
+          <img class="img img-fluid" src="/erplibre_website_snippets/static/src/img/card_extend.png" alt="icon"/>
+          <h4>Lorem ipsum</h4>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </template>
+
+  <template id="s_card_flip" name="Flippable Card">
+    <div class="o_card_flip">
+      <div class="o_avatar">
+        <img class="img img-fluid" src="/erplibre_website_snippets/static/src/img/portrait.png" alt="Avatar"/>
+      </div>
+      <h4 class="card-flip__name">Jane Doe</h4>
+      <p class="card-flip__title">Full Stack Develop</p>
+      <p class="card-flip__bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="card-flip__icons">
+        <a href="https://www.linkedin.com/">
+          <i class="fa fa-linkedin-square"/>
+        </a>
+        <a href="https://github.com//">
+          <i class="fa fa-github-square"/>
+        </a>
+        <a href="mailto: #">
+          <i class="fa fa-envelope-o"/>
+        </a>
+      </div>
+    </div>
+  </template>
+
   <template id="s_h1" name="h1 tag">
     <h1 class="o_h1">ERPLibre rocks!</h1>
   </template>
 
+  <template id="s_h2" name="h1 tag">
+    <h2 class="o_h2">ERPLibre rocks!</h2>
+  </template>
+
+  <template id="s_h3" name="h3 tag">
+    <h3 class="o_h3">ERPLibre rocks!</h3>
+  </template>
+  
+  <!-- maybe remove h4, h5, h6 -->
+  <template id="s_h4" name="h4 tag">
+    <h4 class="o_h4">ERPLibre rocks!</h4>
+  </template>
+  
+  <template id="s_h5" name="h5 tag">
+    <h5 class="o_h5">ERPLibre rocks!</h5>
+  </template>
+  
+  <template id="s_h6" name="h6 tag">
+    <h6 class="o_h6">ERPLibre rocks!</h6>
+  </template>
+  
   <template id="s_p" name="p tag">
     <p class="o_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
   </template>
-  
+
   <template id="s_small" name="small tag">
     <div class="o_small">
-      <small>lil note</small>
+      <small>Lorem ipsum</small>
     </div>
   </template>
 
-  <!-- Add snippets to menu -->
-  <template id="add_erplibre_snippet_to_menu" inherit_id="website.snippets">
+  <template id="s_pill" name="Pill">
+    <span class="o_pill">Pew Pew Pew</span>
+  </template>  
+
+  <!-- Snippet Structure -->
+  <template id="s_section_header" name="Section Header">
+    <section class="o_section_header text-center pt16 pb16">
+      <div class="container">
+        <h5 class="pt8 pb4">Lorem ipsum dolor sit amet</h5>
+        <h2 class="pt4 pb8">Lorem ipsum</h2>
+      </div>
+    </section>
+  </template>
+
+  <template id="s_steps" name="Steps">
+    <section class="o_steps pt16 pb16">
+      <div class="container">
+        <div class="step">
+          <img class="step-img" src="/web/image/website.s_picture_default_image" alt="step 1"/>
+          <div class="step-info">
+            <div class="step-num">1</div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <img class="step-line" src="/erplibre_website_snippets/static/src/img/curve_r.png" alt="line linking steps"/>
+          </div>
+        </div>
+        <div class="step">
+          <img class="step-img" src="/web/image/website.s_picture_default_image" alt="step 2"/>
+          <div class="step-info">
+            <div class="step-num">2</div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <img class="step-line" src="/erplibre_website_snippets/static/src/img/curve_l.png" alt="line linking steps"/>
+          </div>
+        </div>
+        <div class="step">
+          <img class="step-img" src="/web/image/website.s_picture_default_image" alt="step 3"/>
+          <div class="step-info">
+            <div class="step-num">3</div>
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+
+  <!-- Add snippet_content to menu -->
+  <template id="add_snippet_content_to_menu" inherit_id="website.snippets">
     <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
       <t t-snippet="erplibre_website_snippets.s_avatar" t-thumbnail="/erplibre_website_snippets/static/src/img/avatar.png"/>
       <t t-snippet="erplibre_website_snippets.s_image" t-thumbnail="/erplibre_website_snippets/static/src/img/image.png"/>
-      <t t-snippet="erplibre_website_snippets.s_btn_outline" t-thumbnail="/website/static/src/img/snippets_thumbs/s_button.png"/>
-      <t t-snippet="erplibre_website_snippets.s_bullets_finger" t-thumbnail="/website/static/src/img/snippets_thumbs/s_button.png"/>
-      <t t-snippet="erplibre_website_snippets.s_h1" t-thumbnail="/website/static/src/img/snippets_thumbs/s_title.png"/>
-      <t t-snippet="erplibre_website_snippets.s_p" t-thumbnail="/website/static/src/img/snippets_thumbs/s_title.png"/>
-      <t t-snippet="erplibre_website_snippets.s_small" t-thumbnail="/website/static/src/img/snippets_thumbs/s_title.png"/>
+      <t t-snippet="erplibre_website_snippets.s_btn_outline" t-thumbnail="/erplibre_website_snippets/static/src/img/btn_outline.png"/>
+      <t t-snippet="erplibre_website_snippets.s_bullets_finger" t-thumbnail="/erplibre_website_snippets/static/src/img/bullets_finger.png"/>
+      <t t-snippet="erplibre_website_snippets.s_card_extend" t-thumbnail="/erplibre_website_snippets/static/src/img/card_extend.png"/>
+      <t t-snippet="erplibre_website_snippets.s_card_flip" t-thumbnail="/erplibre_website_snippets/static/src/img/card_flip.png"/>
+      <t t-snippet="erplibre_website_snippets.s_h1" t-thumbnail="/erplibre_website_snippets/static/src/img/h1.png"/>
+      <t t-snippet="erplibre_website_snippets.s_h2" t-thumbnail="/erplibre_website_snippets/static/src/img/h2.png"/>
+      <t t-snippet="erplibre_website_snippets.s_h3" t-thumbnail="/erplibre_website_snippets/static/src/img/h3.png"/>
+      <t t-snippet="erplibre_website_snippets.s_h4" t-thumbnail="/erplibre_website_snippets/static/src/img/h4.png"/>
+      <t t-snippet="erplibre_website_snippets.s_h5" t-thumbnail="/erplibre_website_snippets/static/src/img/h5.png"/>
+      <t t-snippet="erplibre_website_snippets.s_h6" t-thumbnail="/erplibre_website_snippets/static/src/img/h6.png"/>
+      <t t-snippet="erplibre_website_snippets.s_p" t-thumbnail="/erplibre_website_snippets/static/src/img/p.png"/>
+      <t t-snippet="erplibre_website_snippets.s_small" t-thumbnail="/erplibre_website_snippets/static/src/img/small.png"/>
+      <t t-snippet="erplibre_website_snippets.s_pill" t-thumbnail="/erplibre_website_snippets/static/src/img/pill.png"/>
+    </xpath>
+  </template>
+
+  <!-- Add snippet_structure to menu -->
+  <template id="add_snippet_structure_to_menu" inherit_id="website.snippets">
+    <xpath expr="//div[@id='snippet_structure']/div[@class='o_panel_body']" position="inside">
+      <t t-snippet="erplibre_website_snippets.s_section_header" t-thumbnail="/erplibre_website_snippets/static/src/img/section_header.png"/>
+      <t t-snippet="erplibre_website_snippets.s_steps" t-thumbnail="/erplibre_website_snippets/static/src/img/steps.png"/>
     </xpath>
   </template>
 
@@ -59,7 +179,7 @@
   <template id="snippet_options" inherit_id="website.snippet_options">
     <xpath expr=".">
       <!-- Horizontal alignment options | Screensize lg or above-->
-      <div data-selector=".o_avatar, .o_image, .o_btn_outline, .o_h1, .o_p, .o_small, .s_btn">
+      <div data-selector=".o_avatar, .o_image_fluid, .o_btn_outline, .o_h1, .o_p, .o_small, .s_btn">
         <div class="dropdown-submenu">
           <a tabindex="-2" href="#" class="dropdown-item">
             <i class="fa fa-align-left"/>Alignment(+=LG)</a>
@@ -70,8 +190,9 @@
           </div>
         </div>
       </div>
+      
       <!-- Horizontal alignment options | Screensize md or below-->
-      <div data-selector=".o_avatar, .o_image, .o_btn_outline, .o_h1, .o_p, .o_small, .s_btn">
+      <div data-selector=".o_avatar, .o_image_fluid, .o_btn_outline, .o_h1, .o_p, .o_small, .s_btn">
         <div class="dropdown-submenu">
           <a tabindex="-2" href="#" class="dropdown-item">
             <i class="fa fa-align-left"/>Alignment(-=MD)
@@ -83,34 +204,78 @@
           </div>
         </div>
       </div>
+
       <!-- Vertical alignment options -->
-      <div data-js="sizing_y" data-selector="section, .row > div, :not(.o_gallery > .container) > .o_avatar, .o_image, .o_btn_outline, o_bullets_finger, .o_h1, .o_p, .o_small"/>
+      <div data-js="sizing_y" data-selector="section, .row > div, :not(.o_gallery > .container) > .o_avatar, .o_image_fluid, .o_btn_outline, o_bullets_finger, .o_h1, .o_p, .o_small"/>
 
       <!-- Hidden options based on screensize-->
-      <div data-selector=".o_image, .o_btn_outline">
+      <div data-selector=".o_image_fluid, .o_btn_outline">
         <div class="dropdown-submenu">
           <a tabindex="-2" href="#" class="dropdown-item">
             <i class="fa fa-align-left"/>Visiblility
           </a>
           <div class="dropdown-menu" role="menu">
-            <a href="#" class="dropdown-item" data-select-class="d-lg-none">Hidden +=LG</a>
-            <a href="#" class="dropdown-item" data-select-class="d-md-none">Hidden +=MD</a>
-            <a href="#" class="dropdown-item" data-select-class="d-md-block d-lg-none">Visible -=MD</a>
-            <a href="#" class="dropdown-item" data-select-class="d-sm-block d-md-none">Visible -=SM</a>
+            <a href="#" class="dropdown-item" data-select-class="d-none d-lg-block">Visible above LG</a>
+            <a href="#" class="dropdown-item" data-select-class="d-block d-lg-none d-xl-none">Visible below LG</a>
           </div>
         </div>
       </div>
 
-      <!-- Drag & drop options -->
-      <div data-js="content" data-selector=".o_avatar, .o_image, .o_btn_outline, .o_bullets_finger, .o_h1, .o_p, .o_small" data-drop-near="p, h1, h2, h3, blockquote, .s_btn, .s_card, .s_alert, .o_facebook_page, .s_share, .s_rating, .s_hr, .o_avatar, .o_image, .o_btn_outline, .o_bullets_finger, .o_h1, .o_p, .o_small" data-drop-in=".content">
+      <!-- Position options-->
+      <div data-selector=".o_image_fluid">
+        <div class="dropdown-submenu">
+          <a tabindex="-2" href="#" class="dropdown-item">
+            <i class="fa fa-align-left"/>Position
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <a href="#" class="dropdown-item" data-select-class="position-relative">Relative</a>
+            <a href="#" class="dropdown-item" data-select-class="position-absolute">Absolute</a>
+            <a href="#" class="dropdown-item" data-select-class="position-fixed">Fixed</a>
+            <a href="#" class="dropdown-item" data-select-class="position-sticky">Sticky</a>
+          </div>
+        </div>
       </div>
+
+      <!-- Absolute position options-->
+      <div data-selector=".o_image_fluid">
+        <div class="dropdown-submenu">
+          <a tabindex="-2" href="#" class="dropdown-item">
+            <i class="fa fa-align-left"/>Absolute Positioning
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <a href="#" class="dropdown-item" data-select-class="top-left">Top-left</a>
+            <a href="#" class="dropdown-item" data-select-class="top-right">Top-right</a>
+            <a href="#" class="dropdown-item" data-select-class="bottom-left">Bottom-left</a>
+            <a href="#" class="dropdown-item" data-select-class="bottom-right">Bottom-right</a>
+            <a href="#" class="dropdown-item" data-select-class="absolute-center">Center</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Color options -->
+			<div data-js="colorpicker" data-selector=".o_card_flip, .o_pill, .o_image_fluid">
+        <div class="dropdown-submenu">
+          <a tabindex="-1" href="#" class="dropdown-item">
+            <i class="fa fa-eyedropper"/>Color
+          </a>
+          <div class="dropdown-menu" role="menu"/>
+        </div>
+      </div>
+
+      <!-- Drag & drop options -->
+      <div data-js="content" 
+        data-selector=".o_avatar, .o_image_fluid, .o_btn_outline, .o_bullets_finger, .o_card_flip, .o_card_extend, .o_h1, .o_h2, .o_h3, .o_h4, .o_h5, .o_h6, .o_p, .o_small, .o_pill"
+        data-drop-near="p, h1, h2, h3, blockquote, .s_btn, .s_card, .s_alert, .o_facebook_page, .s_share, .s_rating, .s_hr, .o_avatar, .o_image_fluid, .o_btn_outline, .o_bullets_finger, .o_card_flip, .o_card_extend, .o_h1, .o_h2, .o_h3, .o_h4, .o_h5, .o_h6, .o_p, .o_small, .o_pill"
+        data-drop-in=".content"/>
+ 
     </xpath>
   </template>
 
   <!-- Add stylesheet -->
   <template id="assets_frontend_erplibre_website_snippets" inherit_id="website.assets_frontend">
     <xpath expr="//link[last()]" position="after">
-      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/erplibre_website_snippets.scss" />
+      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_content.scss" />
+      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_structure.scss" />
     </xpath>
   </template>
 </odoo>
