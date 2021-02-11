@@ -1,58 +1,68 @@
-@import 'components/index.scss';
-#wrapwrap {
-    box-sizing: border-box;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
-    font-size: 12px;
-    transition: all 1s ease;
-    scroll-behavior: smooth;
+html {
+  box-sizing: border-box;
+  transition: all 0.7s ease;
+  scroll-behavior: smooth;
 }
 
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-  margin: 0;
-}
-
-// fonts
-h1, h2, h3, h4, h5, h6, p, ul, a {
-    font-family: 'Apercu', sans-serif !important;
-}
-h1 {
-    font-size: 2.2rem !important;
-}
-h2 {
-    font-size: 2rem !important;
-}
-h3 {
-    font-size: 1.8rem !important;
-}
-h4 {
-    font-size: 1.5rem !important;
-    line-height: 1.5 !important;
-}
-h5,
-h6 {
-    font-size: 1rem !important;
-    line-height: 1.5 !important;
-}
-p, 
-ul {
-    font-size: 1.2rem;
-    line-height: 1.75 !important;
-}
-a {
-    font-size: 1.2rem;
-    text-decoration: none !important;
 }
 
 .yellow-hl {
-    color: var(--tl-yellow);
+    color: theme-color('alpha');
+}
+.bg-yellow {
+  background-color: theme-color('alpha');
 }
 .dblue-hl {
-    color: var(--tl-dark-blue);
+    color: theme-color('menu');
 
 }
 .mono-hl {
     font-family: 'Apercu Mono', monospace; 
+}
+
+// fonts
+body {
+  font-size: 12px !important;
+}
+@include media-breakpoint-up(sm) {
+  body {
+    font-size: 14px !important;
+  }
+}
+@include media-breakpoint-up(md) {
+  body {
+    font-size: 16px !important;
+  }
+}
+@include media-breakpoint-up(lg) {
+  body {
+    font-size: 18px !important;
+  }
+}
+p, ul, a {
+  line-height: 1.5 !important;
+}
+h1 {
+  font-size: 3rem !important;
+}
+h2 {
+  font-size: 2.4rem !important;
+}
+h3 {
+  font-size: 1.8rem !important;
+}
+h4 {
+  font-size: 1.5rem !important;
+}
+h5,
+h6 {
+  font-size: 1.2rem !important;
+}
+a {
+  font-size: 1.2rem;
+  text-decoration: none !important;
 }
