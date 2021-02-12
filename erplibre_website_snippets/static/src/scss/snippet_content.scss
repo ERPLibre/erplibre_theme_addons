@@ -57,83 +57,15 @@
 	padding: 3px 6px;
 	margin: 0 3px;
 	border-radius: 5px;
-}
-
-// Flip card
-.o_card_flip {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 450px;
-	min-width: 320px;
-	max-width: 360px;
-	transition: all 0.5s;
-	opacity: 0.9;
-
-	.o_avatar img {
-		width: 200px;
-		height: 200px;
-		margin-top: 72px;
-		overflow: hidden;
-	}
-	.card-flip__title {
-		position: absolute;
-		top: 12px;
-		right: 24px;
-		font-size: 18px;
-	}
-	.card-flip__name {
-		margin-top: 24px;
-		margin-bottom: 12px;
-		text-align: center;
-		padding: 0 20px;
-		font-weight: 700;
-	}
-	.card-flip__bio {
-		display: none;
-		text-align: center;
-		margin: 0 20px;
-	}
-	.card-flip__icons {
-		position: absolute;
-		bottom: 24px;
-		width: 100%;
-		display: flex;
-		justify-content: space-evenly;
-		align-items: center;
-
-		i {
-			font-size: 36px;
-			transition: all 0.5s;
-		}
-	}
-	// Hover effect
-	&:hover {
-		opacity: 1;
-	}
-	&:hover .o_avatar,
-	&:active .o_avatar {
-		display: none;
-	}
-	&:hover .card-flip__title,
-	&:active .card-flip__title {
-		position: relative;
-		top: auto;
-		right: auto;
-		margin-top: 0;
-	}
-	&:hover .card-flip__bio,
-	&:active .card-flip__bio {
-		display: block;
-	}
+	font-weight: bolder;
 }
 
 .o_card_extend {
+	padding: 10px;
 	overflow: hidden;
 	height: min-content;
-	min-width: 320px;
-	max-width: 360px;
+	margin-top: 1rem;
+  margin-bottom: 1rem;
 
 	.o_image_fluid {
 		overflow: hidden;
@@ -156,11 +88,11 @@
 			margin-right: 8px;
 		}
 		h4 {
-				margin: 0;
-				white-space: nowrap;
+			margin: 0;
+			white-space: nowrap;
 		}
 		p {
-				margin-top: 12px;
+			margin-top: 12px;
 		}
 	}
 }
