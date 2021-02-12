@@ -24,45 +24,34 @@ html {
     font-family: 'Apercu Mono', monospace; 
 }
 
-// fonts
-body {
-  font-size: 12px !important;
-}
-@include media-breakpoint-up(sm) {
-  body {
-    font-size: 14px !important;
+// custom styling for extendable card
+.o_card_extend {
+
+  .o_image_fluid {
+    background-color: #FFF1D1;
+    padding: 1rem;
+    box-shadow: 3px 0 5px #e3e3e3;
+    
+  }
+  .card-extend__text {
+    box-shadow: 3px 3px 5px #e3e3e3;
+  }
+  p {
+    color: #767676;
   }
 }
-@include media-breakpoint-up(md) {
-  body {
-    font-size: 16px !important;
+.o_steps {
+  .step-num {
+    color: theme-color('alpha');
+    opacity: 0.5;
   }
 }
-@include media-breakpoint-up(lg) {
-  body {
-    font-size: 18px !important;
+@media (min-width: 1400px) {
+  .o_steps {
+    .step-num {
+      color: black;
+      background-color: theme-color('alpha');
+      opacity: 1;
+    }
   }
-}
-p, ul, a {
-  line-height: 1.5 !important;
-}
-h1 {
-  font-size: 3rem !important;
-}
-h2 {
-  font-size: 2.4rem !important;
-}
-h3 {
-  font-size: 1.8rem !important;
-}
-h4 {
-  font-size: 1.5rem !important;
-}
-h5,
-h6 {
-  font-size: 1.2rem !important;
-}
-a {
-  font-size: 1.2rem;
-  text-decoration: none !important;
 }
