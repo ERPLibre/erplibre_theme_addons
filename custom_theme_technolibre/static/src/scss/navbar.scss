@@ -1,56 +1,55 @@
+// License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
 .affixed #navbar-tl {
-    border-bottom: 5px solid theme-color('alpha');
-    
-    .nav-item:nth-last-child(5) {
-        background: theme-color('alpha');
-        // background: theme-color('primary');
-        padding: 0.5rem 2rem;
-        font-weight: 600;
-    }
-    .nav-item:nth-last-child(5):hover {
-        background: var(--tl-dark-yellow);
-    }
-    .nav-item:nth-last-child(5) .nav-link {
-        color: theme-color('menu') !important;
-    }
+  border-bottom: 5px solid theme-color('alpha');
+  
+  .nav-item:nth-last-child(3) {
+    background: theme-color('primary');
+    padding: 0.5rem 1rem;
+  }
+  .nav-item:nth-last-child(3):hover {
+    background: #FFC640;
+  }
+  .nav-item:nth-last-child(3) .nav-link {
+    color: black !important;
+  }
 }
 #navbar-tl {
-    background: theme-color('menu') !important;
+  background: theme-color('menu') !important;
+  color: theme-color('beta') !important;
+  padding: 0.5rem 20px;
+  font-size: 18px !important;
+  img {
+    height: 1.8rem;
+  }
+  .nav-link {
     color: theme-color('beta') !important;
-    padding: 1rem 20px;
-    
-    img {
-        height: 2.4rem;
-    }
-    .nav-link {
-        color: theme-color('beta') !important;
-    }
-    button {
-        outline: 0;
-        border: 0;
-        padding: 0;
-    }
-    .navbar-toggler-icon {
-        background-image: url("/web/image/3363/ri_menu-3-line.png");
-    }
-    .nav-item {
-        font-weight: 500;
-        margin: 0.5rem;
-        padding: 0.5rem;
-        display: flex;
-        place-content: center center;
-    }
-    .divider {
-        display: none;
-    }
-    .nav-item:nth-last-child(1) {
-        padding: 0.5rem 2rem;
-        border: 1px solid theme-color('alpha');
-    }
-    .nav-item:nth-last-child(1) .nav-link {
-        color: theme-color('alpha') !important;
-    }
-    .nav-item:nth-last-child(1):hover {
-        background: rgba(255, 186, 26, 0.1);
-    }
+  }
+  button {
+    outline: 0;
+    border: 0;
+    padding: 0;
+  }
+  .navbar-toggler-icon {
+    background-image: url("/custom_theme_technolibre/static/description/ri_menu-3-line.png");
+  }
+  .nav-item {
+    margin: 0.25rem;
+    padding: 0.5rem;
+    display: flex;
+    place-content: center center;
+  }
+  .divider {
+    display: none;
+  }
+  .nav-item:nth-last-child(1) {
+    padding: 0.5rem 1rem;
+    border: 1px solid theme-color('alpha');
+  }
+  .nav-item:nth-last-child(1) .nav-link {
+    color: theme-color('alpha') !important;
+  }
+  .nav-item:nth-last-child(1):hover {
+    background: rgba(255, 186, 26, 0.1);
+  }
 }

@@ -8,6 +8,7 @@
       <link rel="stylesheet" type="text/scss" href="/custom_theme_technolibre/static/src/scss/font.scss"/>
       <link rel="stylesheet" type="text/scss" href="/custom_theme_technolibre/static/src/scss/footer.scss"/>
       <link rel="stylesheet" type="text/scss" href="/custom_theme_technolibre/static/src/scss/navbar.scss"/>
+      <link rel="stylesheet" type="text/scss" href="/custom_theme_technolibre/static/src/scss/form.scss"/>
     </xpath>
   </template>
   <template id="custom_theme_technolibre_var" inherit_id="website._assets_primary_variables">

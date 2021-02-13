@@ -1,3 +1,5 @@
+// License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
 html {
   box-sizing: border-box;
   transition: all 0.7s ease;
@@ -10,21 +12,11 @@ html {
   box-sizing: inherit;
 }
 
-.yellow-hl {
-    color: theme-color('alpha');
-}
-.bg-yellow {
-  background-color: theme-color('alpha');
-}
-.dblue-hl {
-    color: theme-color('menu');
-
-}
-.mono-hl {
-    font-family: 'Apercu Mono', monospace; 
-}
-
 // custom styling for extendable card
+.o_card_flip p {
+  font-size: 18px !important;
+}
+
 .o_card_extend {
 
   .o_image_fluid {
