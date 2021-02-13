@@ -15,15 +15,21 @@
   }
 }
 #navbar-tl {
-  background: theme-color('menu') !important;
-  color: theme-color('beta') !important;
   padding: 0.5rem 20px;
   font-size: 18px !important;
+
+  .nav-link {
+    color: theme-color('secondary');
+  }
+  .nav-link:hover {
+    color: theme-color('primary');
+  }
+  .nav-link.active {
+    color: theme-color('primary');
+  }
+
   img {
     height: 1.8rem;
-  }
-  .nav-link {
-    color: theme-color('beta') !important;
   }
   button {
     outline: 0;
