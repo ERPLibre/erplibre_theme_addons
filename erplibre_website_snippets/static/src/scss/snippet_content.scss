@@ -30,15 +30,13 @@
 		height: 150px;
 		object-fit: cover;
 		border-radius: 50%;
-		border: 2px solid white;
+		border: 2px solid #767676;
 	}
 }
-
 .o_image_fluid {
 	width: 100%;
 	object-fit: cover;
 }
-
 .o_bullets_finger {
 	margin: 24px 0;
 	padding: 0;
@@ -52,66 +50,9 @@
 		content: "👉 ";
 	}
 }
-
 .o_pill {
 	padding: 3px 6px;
 	margin: 0 3px;
 	border-radius: 5px;
 	font-weight: bolder;
-}
-
-.o_card_extend {
-	padding: 10px;
-	overflow: hidden;
-	height: min-content;
-	margin-top: 1rem;
-  margin-bottom: 1rem;
-
-	.o_image_fluid {
-		overflow: hidden;
-		height: 220px;
-		img {
-			width: 100%;
-		}
-	}
-	.card-extend__text {
-		padding: 12px;
-
-		.card-extend__title {
-			display: flex;
-			align-items: center
-		}
-		img {
-			width: 40px;
-			height: 40px;
-			border-radius: 50%;
-			margin-right: 8px;
-		}
-		h4 {
-			margin: 0;
-			white-space: nowrap;
-		}
-		p {
-			margin-top: 12px;
-		}
-	}
-}
-
-@media (min-width: 720px) {
-	.o_card_extend {
-		p {
-			margin: 0;
-			transition: opacity 0.5s ease-out;
-			opacity: 0;
-			height: 0;
-			overflow: hidden;
-		}
-	
-		&:hover p,
-		&:active p {
-			opacity: 1;
-			height: auto;
-			margin-top: 1rem;
-		}
-	}
 }

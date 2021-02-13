@@ -38,7 +38,6 @@
     <h3 class="o_h3">ERPLibre rocks!</h3>
   </template>
   
-  <!-- maybe remove h4, h5, h6 -->
   <template id="s_h4" name="h4 tag">
     <h4 class="o_h4">ERPLibre rocks!</h4>
   </template>
@@ -176,6 +175,28 @@
     </section>
   </template>
 
+  <template id="s_five_part_panel" name="5-Part Panel">
+    <section class="o_five_part_panel pt16 pb16">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 py-3">
+            <h3 class="o_h3">ERPLibre rocks!</h3>
+            <p class="o_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="col-lg-8 col-md-12">
+            <div class="row">
+              <div class="col-lg-6 col-sm-12 p-3">
+                <i class="fa fa-2x fa-leaf rounded-circle bg-primary my-2"/>
+                <h4 class="o_h4">Duplicate Me</h4>
+                <p class="o_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
   <!-- Add snippet_content to menu -->
   <template id="add_snippet_content_to_menu" inherit_id="website.snippets">
     <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
@@ -202,6 +223,7 @@
       <t t-snippet="erplibre_website_snippets.s_steps" t-thumbnail="/erplibre_website_snippets/static/src/img/steps.png"/>
       <t t-snippet="erplibre_website_snippets.s_cards_extend" t-thumbnail="/erplibre_website_snippets/static/src/img/cards_extend.png"/>
       <t t-snippet="erplibre_website_snippets.s_cards_flip" t-thumbnail="/erplibre_website_snippets/static/src/img/cards_flip.png"/>
+      <t t-snippet="erplibre_website_snippets.s_five_part_panel" t-thumbnail="/erplibre_website_snippets/static/src/img/five_part_panel.png"/>
     </xpath>
   </template>
 
@@ -252,7 +274,7 @@
       </div>
 
       <!-- Position options-->
-      <div data-selector=".o_image_fluid">
+      <div data-selector=".o_image_fluid, .o_h3, .o_h4">
         <div class="dropdown-submenu">
           <a tabindex="-2" href="#" class="dropdown-item">
             <i class="fa fa-align-left"/>Position
@@ -270,10 +292,10 @@
       <div data-selector=".o_card_flip">
         <div class="dropdown-submenu">
           <a tabindex="-2" href="#" class="dropdown-item">
-            <i class="fa fa-align-left"/>flippable
+            <i class="fa fa-align-left"/>flip?
           </a>
           <div class="dropdown-menu" role="menu">
-            <a href="#" class="dropdown-item" data-select-class="flippable">yes</a>
+            <a href="#" class="dropdown-item" data-select-class="flippable">Yes</a>
           </div>
         </div>
       </div>
@@ -317,7 +339,10 @@
   <template id="assets_frontend_erplibre_website_snippets" inherit_id="website.assets_frontend">
     <xpath expr="//link[last()]" position="after">
       <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_content.scss" />
-      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_structure.scss" />
+      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_steps.scss" />
+      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_cards_extend.scss" />
+      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_cards_flip.scss" />
+      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_five_part_panel.scss" />
     </xpath>
   </template>
 </odoo>
