@@ -197,6 +197,63 @@
     </section>
   </template>
 
+  <template id="s_linked_image_grid" name="Linked Image Grid">
+    <section class="o_linked_image_grid pt16 pb16">
+      <div class="container">
+        <div class="row">
+          <div class="linked_image col-lg-8 col-md-12 px-0 w-100 position-relative" style="height: 400px; overflow: hidden;">
+            <a href="#">
+              <img class="o_image_fluid img img-fluid h-100" src="/web/image/website.s_picture_default_image" alt="Image"/>
+              <h4 class="mb-0 py-1 text-center position-absolute" style="bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.5)">Newspaper</h4>
+              <div class="image_overlay"/>
+            </a>
+          </div>
+          <div class="col-lg-4 px-0">
+            <div class="linked_image w-100 px-0 position-relative" style="height: 200px; overflow: hidden">
+              <a href="#">
+                <img class="o_image_fluid img img-fluid h-100" src="/web/image/website.s_picture_default_image" alt="Image"/>
+                <h4 class="mb-0 py-1 text-center position-absolute" style="bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.5)">Events</h4>
+                <div class="image_overlay"/>
+              </a>
+            </div>
+            <div class="linked_image w-100 px-0 position-relative" style="height: 200px; overflow: hidden">
+              <a href="#">
+                <img class="o_image_fluid img img-fluid h-100" src="/web/image/website.s_picture_default_image" alt="Image"/>
+                <h4 class="mb-0 py-1 text-center position-absolute" style="bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.5)">Media</h4>
+                <div class="image_overlay"/>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex flex-lg-row flex-column-reverse">
+          <div class="col-lg-4 px-0">
+            <div class="linked_image w-100 px-0 position-relative" style="height: 200px; overflow: hidden">
+              <a href="#">
+                <img class="o_image_fluid img img-fluid h-100" src="/web/image/website.s_picture_default_image" alt="Image"/>
+                <h4 class="mb-0 py-1 text-center position-absolute" style="bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.5)">Events</h4>
+                <div class="image_overlay"/>
+              </a>
+            </div>
+            <div class="linked_image w-100 px-0 position-relative" style="height: 200px; overflow: hidden">
+              <a href="#">
+                <img class="o_image_fluid img img-fluid h-100" src="/web/image/website.s_picture_default_image" alt="Image"/>
+                <h4 class="mb-0 py-1 text-center position-absolute" style="bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.5)">Media</h4>
+                <div class="image_overlay"/>
+              </a>
+            </div>
+          </div>
+          <div class="linked_image col-lg-8 col-md-12 px-0 w-100 position-relative" style="height: 400px; overflow: hidden;">
+            <a href="#">
+              <img class="o_image_fluid img img-fluid h-100" src="/web/image/website.s_picture_default_image" alt="Image"/>
+              <h4 class="mb-0 py-1 text-center position-absolute" style="bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.5)">Newspaper</h4>
+              <div class="image_overlay"/>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
   <!-- Add snippet_content to menu -->
   <template id="add_snippet_content_to_menu" inherit_id="website.snippets">
     <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
@@ -224,6 +281,7 @@
       <t t-snippet="erplibre_website_snippets.s_cards_extend" t-thumbnail="/erplibre_website_snippets/static/src/img/cards_extend.png"/>
       <t t-snippet="erplibre_website_snippets.s_cards_flip" t-thumbnail="/erplibre_website_snippets/static/src/img/cards_flip.png"/>
       <t t-snippet="erplibre_website_snippets.s_five_part_panel" t-thumbnail="/erplibre_website_snippets/static/src/img/five_part_panel.png"/>
+      <t t-snippet="erplibre_website_snippets.s_linked_image_grid" t-thumbnail="/erplibre_website_snippets/static/src/img/linked_image_grid.png"/>
     </xpath>
   </template>
 
@@ -343,6 +401,7 @@
       <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_cards_extend.scss" />
       <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_cards_flip.scss" />
       <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_five_part_panel.scss" />
+      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_linked_image_grid.scss" />
     </xpath>
   </template>
 </odoo>
