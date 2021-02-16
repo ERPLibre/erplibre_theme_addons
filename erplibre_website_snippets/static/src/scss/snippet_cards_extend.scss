@@ -6,6 +6,8 @@
 	height: min-content;
 	margin-top: 1rem;
   margin-bottom: 1rem;
+	cursor: pointer;
+	transition: opacity 0.8s;
 
 	.o_image_fluid {
 		overflow: hidden;
@@ -18,8 +20,9 @@
 		padding: 12px;
 
 		.card-extend__title {
+			padding-top: 12px;
 			display: flex;
-			align-items: center
+			align-items: center;
 		}
 		img {
 			width: 40px;
@@ -32,14 +35,6 @@
 			white-space: nowrap;
 		}
 		p {
-			margin-top: 12px;
-		}
-	}
-}
-
-@media (min-width: 720px) {
-	.o_card_extend {
-		p {
 			margin: 0;
 			transition: opacity 0.5s ease-out;
 			opacity: 0;
@@ -47,11 +42,10 @@
 			overflow: hidden;
 		}
 	
-		&:hover p,
-		&:active p {
-			opacity: 1;
-			height: auto;
-			margin-top: 1rem;
-		}
+	}
+	&.extended p {
+		opacity: 1;
+		height: auto;
+		margin-top: 1rem;
 	}
 }

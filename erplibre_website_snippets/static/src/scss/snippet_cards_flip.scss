@@ -6,6 +6,7 @@
   perspective: 1000px;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  cursor: pointer;
   
   .card-flip__inner {
     border: 1px solid #808080;
@@ -70,7 +71,7 @@
 			font-size: 2.4rem;
 		}
 	}
-  &.flippable:hover .card-flip__inner {
+  &.flippable.flipped .card-flip__inner {
     transform: rotateY(180deg);
   }
 }
