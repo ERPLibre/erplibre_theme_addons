@@ -86,16 +86,17 @@
   }
 
   .timeline-inner__text {
-    padding-right: 1rem;
+    padding-right: 0.25rem;
     p {
       color: #767676;
+      margin-bottom: 0;
     }
   }
 
   .timeline-inner__date {
     padding-left: 1rem;
     text-align: justify;
-    border-left: 1px solid #767676;
+    border-left: 1px solid lightgray;
     display: flex;
     flex-direction: column;
     align-items: center;

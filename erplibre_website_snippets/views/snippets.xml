@@ -8,8 +8,8 @@
     </div>
   </template>
 
-  <template id="s_image" name="Image">
-    <img class="o_image_fluid img img-fluid" src="/web/image/website.s_picture_default_image" alt="Image"/>
+  <template id="s_media" name="Media">
+    <img class="o_image_fluid img img-fluid" src="/web/image/website.s_picture_default_image" alt="Media"/>
   </template>
 
   <template id="s_btn_outline" name="Button Outline">
@@ -258,16 +258,32 @@
     <section class="o_timeline_vertical bg-200 pt16 pb16">
       <div class="container">
         <div class="timeline-wrapper">
-          <div class="timeline-inner bg-100">
+          <div class="timeline-inner">
             <div class="timeline-inner__text">
               <h4>Organization Inception</h4>
-              <p>Detail the story of the organization inception</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <div class="timeline-inner__date">
-              <h6>Jan</h6>
-              <h3>01</h3>
+              <h3>JAN</h3>
               <h6>2021</h6>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <template id="s_timeline_horizontal" name="Horizontal Timeline">
+    <section class="o_timeline_horizontal pt16 pb16">
+      <div class="container">
+        <div class="timeline-wrapper">
+          <div class="timeline-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h2>2021</h2>
+          </div>
+          <div class="timeline-icon">
+            <i class="fa fa-2x fa-font-awesome rounded-circle bg-primary s_features_grid_icon"/>
+            <h4>Organization Inception</h4>
           </div>
         </div>
       </div>
@@ -278,7 +294,7 @@
   <template id="add_snippet_content_to_menu" inherit_id="website.snippets">
     <xpath expr="//div[@id='snippet_content']/div[@class='o_panel_body']" position="inside">
       <t t-snippet="erplibre_website_snippets.s_avatar" t-thumbnail="/erplibre_website_snippets/static/src/img/avatar.png"/>
-      <t t-snippet="erplibre_website_snippets.s_image" t-thumbnail="/erplibre_website_snippets/static/src/img/image.png"/>
+      <t t-snippet="erplibre_website_snippets.s_media" t-thumbnail="/erplibre_website_snippets/static/src/img/media.png"/>
       <t t-snippet="erplibre_website_snippets.s_btn_outline" t-thumbnail="/erplibre_website_snippets/static/src/img/btn_outline.png"/>
       <t t-snippet="erplibre_website_snippets.s_bullets_finger" t-thumbnail="/erplibre_website_snippets/static/src/img/bullets_finger.png"/>
       <t t-snippet="erplibre_website_snippets.s_h1" t-thumbnail="/erplibre_website_snippets/static/src/img/h1.png"/>
@@ -303,6 +319,7 @@
       <t t-snippet="erplibre_website_snippets.s_five_part_panel" t-thumbnail="/erplibre_website_snippets/static/src/img/five_part_panel.png"/>
       <t t-snippet="erplibre_website_snippets.s_linked_image_grid" t-thumbnail="/erplibre_website_snippets/static/src/img/linked_image_grid.png"/>
       <t t-snippet="erplibre_website_snippets.s_timeline_vertical" t-thumbnail="/erplibre_website_snippets/static/src/img/timeline_vertical.png"/>
+      <t t-snippet="erplibre_website_snippets.s_timeline_horizontal" t-thumbnail="/erplibre_website_snippets/static/src/img/timeline_horizontal.png"/>
     </xpath>
   </template>
 
@@ -396,7 +413,7 @@
       </div>
 
       <!-- Color options -->
-			<div data-js="colorpicker" data-selector=".o_card_flip, .o_pill, .o_image_fluid">
+			<div data-js="colorpicker" data-selector=".o_card_flip, .o_pill, .o_image_fluid, .timeline-inner">
         <div class="dropdown-submenu">
           <a tabindex="-1" href="#" class="dropdown-item">
             <i class="fa fa-eyedropper"/>Color
@@ -424,6 +441,7 @@
       <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_five_part_panel.scss" />
       <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_linked_image_grid.scss" />
       <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_timeline_vertical.scss" />
+      <link rel="stylesheet" type="text/scss" href="/erplibre_website_snippets/static/src/scss/snippet_timeline_horizontal.scss" />
     </xpath>
     <xpath expr="//script[last()]" position="after">
       <script type="text/javascript" src="/erplibre_website_snippets/static/src/js/website_snippet_animation_flip_card.js"/>
