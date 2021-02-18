@@ -153,8 +153,10 @@
                 </div>
               </div>
               <div class="card-flip__back">
-                <h4>Duplicate Me</h4>
-                <h5>Full Stack Developer</h5>
+                <div>
+                  <h4>Duplicate Me</h4>
+                  <h5>Full Stack Developer</h5>
+                </div>
                 <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="card-flip__icons">
                   <a href="https://www.linkedin.com/">
@@ -382,10 +384,10 @@
       <div data-selector=".o_card_flip">
         <div class="dropdown-submenu">
           <a tabindex="-2" href="#" class="dropdown-item">
-            <i class="fa fa-align-left"/>flip?
+            <i class="fa fa-align-left"/>Flip on Click?
           </a>
           <div class="dropdown-menu" role="menu">
-            <a href="#" class="dropdown-item" data-select-class="flippable">Yes</a>
+            <a href="#" class="dropdown-item" data-toggle-class="flippable">Yes/No</a>
           </div>
         </div>
       </div>
