@@ -1,15 +1,11 @@
 // License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-// snippet | steps
 .o_steps {
   .step {
     display: grid;
     padding: 36px 0;
     max-width: 450px;
     margin: 0 auto;
-    .step-img {
-      padding: 20px;
-    }
     img {
       max-width: 100%;
       max-height: 300px;

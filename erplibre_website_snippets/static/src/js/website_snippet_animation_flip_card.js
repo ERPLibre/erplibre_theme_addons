@@ -3,12 +3,15 @@ odoo.define('erplibre_website_snippets.animation', function (require) {
 
   var sAnimation = require('website.content.snippets.animation');
 
-  sAnimation.registry.erplibre_website_snippets = sAnimation.Class.extend({
+  sAnimation.registry.erplibre_website_snippet_flip_card = sAnimation.Class.extend({
     selector: '.o_cards_flip',
     read_events: {
       'click .flippable': '_toggleFlip',
     },
 
+    start: function () {
+      console.log('potato');
+    },
     //--------------------------------------------------------------------------
     // Handlers
     //--------------------------------------------------------------------------

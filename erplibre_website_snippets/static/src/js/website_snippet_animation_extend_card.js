@@ -1,9 +1,9 @@
-odoo.define('erplibre_website_snippets.animation', function (require) {
+odoo.define('erplibre_website_snippets.animation_extend_card', function (require) {
   'use strict';
 
   var sAnimation = require('website.content.snippets.animation');
 
-  sAnimation.registry.erplibre_website_snippets = sAnimation.Class.extend({
+  sAnimation.registry.erplibre_website_snippet_extend_card = sAnimation.Class.extend({
     selector: '.o_cards_extend',
     read_events: {
       'click .o_card_extend': '_toggleExtend',
