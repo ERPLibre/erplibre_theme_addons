@@ -1,7 +1,8 @@
 // License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 .o_timeline_horizontal {
-  overflow-x: scroll;
+  // Hide scroll bar when not needed
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
   
   .container {
@@ -10,7 +11,6 @@
 
   // content
   .timeline-wrapper {
-    scroll-snap-align: center;
     position: relative;
     width: 400px;
     min-width: 320px;
@@ -99,5 +99,9 @@
 @media screen and (max-width: 600px) {
   .o_timeline_horizontal {
     scrollbar-width: none;
+
+    .timeline-wrapper {
+      scroll-snap-align: center;
+    }
   }
 }
