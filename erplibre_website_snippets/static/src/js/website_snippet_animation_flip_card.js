@@ -9,9 +9,6 @@ odoo.define('erplibre_website_snippets.animation', function (require) {
       'click .flippable': '_toggleFlip',
     },
 
-    start: function () {
-      console.log('potato');
-    },
     //--------------------------------------------------------------------------
     // Handlers
     //--------------------------------------------------------------------------

@@ -3,7 +3,6 @@
 .o_timeline_horizontal {
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none;
   
   .container {
     display: inline-flex;
@@ -27,6 +26,7 @@
     flex-direction: column-reverse;
   }
 
+  // line
   .timeline-wrapper::before {
     content: '';
     position: absolute;
@@ -48,9 +48,11 @@
     padding: 20px 0;
     text-align: center;
   }
+
   .timeline-wrapper:nth-child(even) > * {
     flex-direction: column-reverse;
   }
+  
   h2 {
     font-weight: bold;
   }
@@ -78,5 +80,24 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .timeline-icon::after {
+    content: '';
+    width: 3px;
+    height: 10vh;
+    background-color: theme-color('alpha');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .timeline-wrapper:nth-child(even) .timeline-icon::after {
+    transform: translateY(-100%);
+  }
+}
+@media screen and (max-width: 600px) {
+  .o_timeline_horizontal {
+    scrollbar-width: none;
   }
 }
