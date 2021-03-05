@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="report_saleorder_document_custom"
+    <template id="report_saleorder_erplibre_vertical_header"
               inherit_id="sale.report_saleorder_document">
 
         <!-- update doc title -->

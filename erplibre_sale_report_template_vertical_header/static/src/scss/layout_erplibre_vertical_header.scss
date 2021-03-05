@@ -1,18 +1,5 @@
-@font-face {
-    font-family: 'URWGeometric';
-    src: url('../fonts/URWGeometric-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-@font-face {
-    font-family: 'URWGeometric';
-    src: url('../fonts/URWGeometric-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
-
-.o_report_layout_custom {
-    font-family: URWGeometric, sans-serif;
+.o_report_layout_erplibre_vertical_header {
+    font-family: inherit;
     width: 100%;
     display: flex;
     background: white;
@@ -26,10 +13,9 @@
         margin-bottom: 0;
     }
 }
-.o_header_custom {
+.o_header_erplibre_vertical_header {
     margin-top: 48mm;
     width: 25%;
-    // full height: 279.4mm?? (margin-top, btn: 5mm, 10mm, header: 48mm)
     min-height: 262mm;
     padding: 1rem;
     background-color: darken($o-brand-secondary, 25%);
@@ -37,13 +23,13 @@
     flex-direction: column;
     color: white;
 
-    .header_custom--logo {
+    .header_erplibre_vertical_header__logo {
         width: 100%;
         img {
             width: 100%;
         }
     }
-    .header_custom--info {
+    .header_erplibre_vertical_header__info {
         margin: 3rem 0;
         text-align: center;
         list-style: none;
@@ -54,7 +40,7 @@
         }
     }
 }
-.o_report_layout_custom .layout_custom--content {
+.o_report_layout_erplibre_vertical_header .layout_erplibre_vertical_header__content {
     padding: 1rem;
     margin-top: 48mm;
     width: 75%;

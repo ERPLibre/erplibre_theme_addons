@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Assets for reports -->
-    <template id="report_assets_custom_erplibre" inherit_id="web.report_assets_common">
+    <template id="report_assets_erplibre_vertical_header" inherit_id="web.report_assets_common">
         <xpath expr="//link[last()]">
             <link rel="stylesheet" type="text/scss"
-                  href="/document_template_custom_erplibre/static/src/scss/layout_custom_erplibre.scss"/>
+                  href="/erplibre_sale_report_template_vertical_header/static/src/scss/layout_erplibre_vertical_header.scss"/>
         </xpath>
     </template>
 
     <!-- Adapt address layout -->
-    <template id="address_layout_custom" inherit_id="web.address_layout">
+    <template id="address_layout_erplibre_vertical_header" inherit_id="web.address_layout">
         <xpath expr="//div[@name='address']" position="before">
             <t t-set="colclass" t-value="'col-6'"/>
         </xpath>
@@ -19,7 +19,7 @@
     </template>
 
     <!-- conditional to company.external_report_layout_id.key, set full width  -->
-    <template id="report_layout_custom" inherit_id="web.report_layout">
+    <template id="report_layout_erplibre_vertical_header" inherit_id="web.report_layout">
         <xpath expr="//body/div[@id='wrapwrap']/main" position="before">
             <!-- set company -->
             <t t-if="not company">
@@ -35,20 +35,20 @@
                 </t>
             </t>
             <t t-if="company.external_report_layout_id">
-                <t t-if="company.external_report_layout_id.key == 'document_template_custom_erplibre.external_layout_custom_erplibre'">
+                <t t-if="company.external_report_layout_id.key == 'erplibre_sale_report_template_vertical_header.external_layout_erplibre_vertical_header'">
                     <t t-set="full_width" t-value="True"/>
                 </t>
             </t>
         </xpath>
     </template>
 
-    <template id="external_layout_custom_erplibre">
-        <div class="article o_report_layout_custom"  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
-            <div class="o_header_custom">
-                <div class="header_custom--logo">
+    <template id="external_layout_erplibre_vertical_header">
+        <div class="article o_report_layout_erplibre_vertical_header"  t-att-data-oe-model="o and o._name" t-att-data-oe-id="o and o.id" t-att-data-oe-lang="o and o.env.context.get('lang')">
+            <div class="o_header_erplibre_vertical_header">
+                <div class="header_erplibre_vertical_header__logo">
                     <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
                 </div>
-                <ul class="header_custom--info" name="company_address">
+                <ul class="header_erplibre_vertical_header__info" name="company_address">
                     <strong><li t-if="company.name"><span t-field="company.name"/></li></strong>
                     <li>
                         <span class="company_address"
@@ -62,7 +62,7 @@
                 </ul>
             </div>
 
-            <div class="layout_custom--content">
+            <div class="layout_erplibre_vertical_header__content">
                 <t t-call="web.address_layout"/>
                 <t t-raw="0"/>
             </div>

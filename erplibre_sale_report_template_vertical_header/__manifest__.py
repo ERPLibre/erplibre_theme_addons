@@ -1,15 +1,15 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
-    'name': 'document template custom erplibre',
+    'name': 'ERPLibre Sale Report Template Vertical Header',
     'author': 'TechnoLibre',
     'website': 'https://technolibre.ca',
     'category': 'Other',
     'description': """
-document template custom erplibre
-=================================
-for best result with PDF generation, please set the paper format to US Letter (custom erplibre)
-Setting > General Parameters > Format > (dropdown) US Letter (custom erplibre) > Save
+ERPlivre Sale Report Template Vertical Header
+=============================================
+for best result with PDF generation, please set the paper format to US Letter (erplibre vertical header)
+Setting > General Parameters > Format > (dropdown) US Letter (erplibre vertical header) > Save
 
     """,
     'depends': [

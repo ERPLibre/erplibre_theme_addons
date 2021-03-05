@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="paperformat_custom_erplibre" model="report.paperformat">
-            <field name="name">US Letter (custom erplibre)</field>
+        <record id="paperformat_erplibre_vertical_header" model="report.paperformat">
+            <field name="name">US Letter (erplibre vertical header)</field>
             <field name="default" eval="False" />
             <field name="format">Letter</field>
             <field name="page_height">0</field>
