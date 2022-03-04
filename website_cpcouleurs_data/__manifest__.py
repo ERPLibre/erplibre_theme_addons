@@ -8,6 +8,7 @@
     "website": "https://technolibre.ca",
     "depends": ["website"],
     "data": [
+        "data/ir_attachment.xml",
         "data/ir_ui_view.xml",
         "data/website_page.xml",
         "data/website_menu.xml",
