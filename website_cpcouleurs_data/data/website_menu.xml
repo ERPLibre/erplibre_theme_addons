@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="website_menu_top_menu_for_website_1" model="website.menu">
+            <field name="name">Top Menu for Website 1</field>
+            <field name="url">/default-main-menu</field>
+            <field name="website_id" ref="website.default_website" />
+        </record>
+        <record id="website_menu_produits" model="website.menu">
+            <field name="name">Produits</field>
+            <field name="parent_id" ref="website_menu_top_menu_for_website_1" />
+            <field name="sequence">1</field>
+            <field name="url">#produits</field>
+            <field name="website_id" ref="website.default_website" />
+        </record>
+        <record id="website_menu_contact" model="website.menu">
+            <field name="name">Contact</field>
+            <field name="parent_id" ref="website_menu_top_menu_for_website_1" />
+            <field name="sequence">2</field>
+            <field name="url">#contact</field>
+            <field name="website_id" ref="website.default_website" />
+        </record>
+    </data>
+</odoo>

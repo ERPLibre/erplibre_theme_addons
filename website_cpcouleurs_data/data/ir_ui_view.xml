@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="ir_ui_view_/portal/static/src/scss/portal_custom_web_assets_frontend_scss" model="ir.ui.view">
+            <field name="arch" type="xml">
+                <data inherit_id="portal.assets_frontend" name="/portal/static/src/scss/portal.custom.web.assets_frontend.scss">
+                    <xpath expr="//link[@href='/portal/static/src/scss/portal.scss']" position="attributes">
+                        <attribute name="href">/portal/static/src/scss/portal.custom.web.assets_frontend.scss</attribute>
+                    </xpath>
+                </data>
+            </field>
+            <field name="inherit_id" ref="portal.assets_frontend" />
+            <field name="key">web_editor.scss_4f29b3</field>
+            <field name="name">/portal/static/src/scss/portal.custom.web.assets_frontend.scss</field>
+            <field name="type">qweb</field>
+        </record>
+        <record id="ir_ui_view_/theme_enark/static/src/scss/bootstrap_overridden_custom_web_assets_frontend_scss" model="ir.ui.view">
+            <field name="arch" type="xml">
+                <data inherit_id="" name="/theme_enark/static/src/scss/bootstrap_overridden.custom.web.assets_frontend.scss">
+                    <xpath expr="//link[@href='/theme_enark/static/src/scss/bootstrap_overridden.scss']" position="attributes">
+                        <attribute name="href">/theme_enark/static/src/scss/bootstrap_overridden.custom.web.assets_frontend.scss</attribute>
+                    </xpath>
+                </data>
+            </field>
+            <field name="inherit_id" ref="ir_ui_view_assets_frontend_helpers" />
+            <field name="key">web_editor.scss_e46bde</field>
+            <field name="name">/theme_enark/static/src/scss/bootstrap_overridden.custom.web.assets_frontend.scss</field>
+            <field name="type">qweb</field>
+        </record>
+        <record id="ir_ui_view_/web/static/src/scss/bootstrap_overridden_frontend_custom_web_assets_frontend_scss" model="ir.ui.view">
+            <field name="arch" type="xml">
+                <data inherit_id="web._assets_frontend_helpers" name="/web/static/src/scss/bootstrap_overridden_frontend.custom.web.assets_frontend.scss">
+                    <xpath expr="//link[@href='/web/static/src/scss/bootstrap_overridden_frontend.scss']" position="attributes">
+                        <attribute name="href">/web/static/src/scss/bootstrap_overridden_frontend.custom.web.assets_frontend.scss</attribute>
+                    </xpath>
+                </data>
+            </field>
+            <field name="inherit_id" ref="web._assets_frontend_helpers" />
+            <field name="key">web_editor.scss_d685d9</field>
+            <field name="name">/web/static/src/scss/bootstrap_overridden_frontend.custom.web.assets_frontend.scss</field>
+            <field name="type">qweb</field>
+        </record>
+        <record id="ir_ui_view_/website/static/src/scss/options/colors/user_color_palette_custom_web_assets_common_scss" model="ir.ui.view">
+            <field name="arch" type="xml">
+                <data inherit_id="website._assets_primary_variables" name="/website/static/src/scss/options/colors/user_color_palette.custom.web.assets_common.scss">
+                    <xpath expr="//link[@href='/website/static/src/scss/options/colors/user_color_palette.scss']" position="attributes">
+                        <attribute name="href">/website/static/src/scss/options/colors/user_color_palette.custom.web.assets_common.scss</attribute>
+                    </xpath>
+                </data>
+            </field>
+            <field name="inherit_id" ref="website._assets_primary_variables" />
+            <field name="key">web_editor.scss_b63eb5</field>
+            <field name="name">/website/static/src/scss/options/colors/user_color_palette.custom.web.assets_common.scss</field>
+            <field name="type">qweb</field>
+        </record>
+        <record id="ir_ui_view_/website/static/src/scss/options/colors/user_theme_color_palette_custom_web_assets_common_scss" model="ir.ui.view">
+            <field name="arch" type="xml">
+                <data inherit_id="website._assets_primary_variables" name="/website/static/src/scss/options/colors/user_theme_color_palette.custom.web.assets_common.scss">
+                    <xpath expr="//link[@href='/website/static/src/scss/options/colors/user_theme_color_palette.scss']" position="attributes">
+                        <attribute name="href">/website/static/src/scss/options/colors/user_theme_color_palette.custom.web.assets_common.scss</attribute>
+                    </xpath>
+                </data>
+            </field>
+            <field name="inherit_id" ref="website._assets_primary_variables" />
+            <field name="key">web_editor.scss_54eca3</field>
+            <field name="name">/website/static/src/scss/options/colors/user_theme_color_palette.custom.web.assets_common.scss</field>
+            <field name="type">qweb</field>
+        </record>
+        <record id="ir_ui_view_home" model="ir.ui.view">
+            <field name="arch" type="xml">
+                <t name="Homepage" t-name="website.homepage1">
+                    <t t-call="website.layout">
+                        <t t-set="pageName" t-value="'homepage'" />
+                        <div id="wrap" class="oe_structure oe_empty">
+                            <section class="s_cover parallax s_parallax_is_fixed s_parallax_no_overflow_hidden pb232 pt64" data-scroll-background-ratio="1" style="background-image: none; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgimage="">
+                                <span class="s_parallax_bg oe_img_bg oe_custom_bg" style="background-image: url(&quot;/web/image/4574/paper-4330983_light.jpg&quot;); background-position: 50.79% 79.2%;" />
+                                <div class="container">
+                                    <div class="row s_nb_column_fixed">
+                                        <div class="col-lg-12 s_title" data-name="Title">
+                                            <h1 class="s_title_default" style="font-size: 0px; text-align: center;">
+                                                <b>
+                                                    <span style="color: rgb(32, 53, 102); font-size: 48px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">CP</span>
+                                                    <span style="color: rgb(255, 82, 0); font-size: 48px; --darkreader-inline-color: #ff631a;" data-darkreader-inline-color="">COULEURS</span>
+                                                </b>
+                                            </h1>
+                                            <h1 class="o_h1" style="text-align: center;">
+                                                <font style="color: rgb(255, 82, 0); font-size: 36px; --darkreader-inline-color: #ff631a;" data-darkreader-inline-color="">CLAUDE PIGEON</font>
+                                                <br />
+                                            </h1>
+                                            <h1 class="o_h1" style="text-align: center;">
+                                                <font style="color: rgb(32, 53, 102); font-size: 24px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">Imprimeur</font>
+                                            </h1>
+                                        </div>
+                                        <div class="col-lg-12 s_btn text-center pt16 pb16" data-name="Buttons">
+                                            <a href="#contact" class="rounded-circle rounded-circle btn btn-primary rounded-circle btn-sm" data-original-title="" title="" aria-describedby="tooltip340475">Contact</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_three_columns_circle bg-white oe_custom_bg" style="" id="produits">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12 text-center pt32">
+                                            <h2>
+                                                <span style="font-weight: normal;">
+                                                    <font style="color: rgb(32, 53, 102); font-size: 36px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">Notre gamme de produits</font>
+                                                </span>
+                                                <br />
+                                            </h2>
+                                            <h3 class="text-muted">&amp;nbsp;</h3>
+                                        </div>
+                                        <div class="mt32 mb16 padding-l-r-32 col-lg-4">
+                                            <img src="/web/image/2175/concept-map_border_orange_2.png" class="img-fluid rounded-circle d-block mx-auto o_animate_both_scroll o_animate o_anim_pulse" data-original-title="" title="" aria-describedby="tooltip270787" style="animation-name: o_anim_pulse; visibility: visible; animation-play-state: paused;" />
+                                            <h3 class="o_h3" style="text-align: center;">
+                                                <font style="color: rgb(32, 53, 102); font-size: 24px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">Conception infographique</font>
+                                                <br />
+                                            </h3>
+                                            <div style="text-align: center;">
+                                                <ul>
+                                                    <li>
+                                                        <p class="mt16 text-justify">Design</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="mt16 text-justify">Cr&#233;ation de formulaires</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="mt16 text-justify">Mise en page textuelle</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="mt16 text-justify">Montage</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="mt32 mb16 padding-l-r-32 col-lg-4">
+                                            <img src="/web/image/2177/flyer_border_bleu_2.png" class="img-fluid rounded-circle d-block mx-auto o_animate_both_scroll o_animate o_anim_pulse" data-original-title="" title="" aria-describedby="tooltip479581" style="animation-name: o_anim_pulse; visibility: visible; animation-play-state: paused;" />
+                                            <h3 class="o_h3" style="text-align: center;">
+                                                <font style="color: rgb(32, 53, 102); font-size: 24px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">
+                                                    Papeterie commerciale
+                                                    <br />
+                                                </font>
+                                            </h3>
+                                            <div style="text-align: left;">
+                                                <ul>
+                                                    <li>
+                                                        <p class="mt16 text-justify">Papeterie compl&#232;te</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="mt16 text-justify">En-t&#234;te de lettre</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="mt16 text-justify">Enveloppes de toutes grandeurs</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="mt16 text-justify">D&#233;pliants</p>
+                                                    </li>
+                                                    <li>
+                                                        <p class="mt16 text-justify">Feuillets promotionnels</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="mt32 mb16 padding-l-r-32 col-lg-4">
+                                            <img src="/web/image/2181/carte_affaires_border_orange.png" class="img-fluid rounded-circle d-block mx-auto o_animate_both_scroll o_animate o_anim_pulse" data-original-title="" title="" aria-describedby="tooltip952106" style="animation-name: o_anim_pulse; visibility: visible; animation-play-state: paused;" />
+                                            <h3 class="o_h3" style="text-align: center;">
+                                                <font style="color: rgb(32, 53, 102); font-size: 24px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">Image de marque</font>
+                                            </h3>
+                                            <ul>
+                                                <li>
+                                                    <p class="mt16 text-justify">Cartes d'affaires</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">D&#233;pliants</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Factures</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Devis</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Bons de commande</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Ch&#232;ques</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_three_columns_circle bg-white oe_custom_bg pb48" style="">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="mt32 mb16 padding-l-r-32 col-lg-4">
+                                            <img src="/web/image/2183/facture_background_bleu.png" class="img-fluid rounded-circle d-block mx-auto o_animate_both_scroll o_animate o_anim_pulse" data-original-title="" title="" aria-describedby="tooltip511444" style="animation-name: o_anim_pulse; visibility: visible; animation-play-state: paused;" />
+                                            <h3 class="o_h3" style="text-align: center;">
+                                                <font style="color: rgb(32, 53, 102); font-size: 24px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">
+                                                    Formules d'affaires
+                                                    <br />
+                                                </font>
+                                            </h3>
+                                            <ul>
+                                                <li>
+                                                    <p class="mt16 text-justify">Factures</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Bons de commande</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Bons de livraison</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Devis</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Connaissements</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="mt32 mb16 padding-l-r-32 col-lg-4">
+                                            <img src="/web/image/2185/etiquette_border_orange.png" class="img-fluid rounded-circle d-block mx-auto o_animate_both_scroll o_animate o_anim_pulse" data-original-title="" title="" aria-describedby="tooltip429537" style="animation-name: o_anim_pulse; visibility: visible; animation-play-state: paused;" />
+                                            <h3 class="o_h3" style="text-align: center;">
+                                                <font style="color: rgb(32, 53, 102); font-size: 24px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">&#201;tiquettes</font>
+                                                <br />
+                                            </h3>
+                                            <ul>
+                                                <li>
+                                                    <p class="mt16 text-justify">&#201;tiquettes autocollantes</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">&#201;tiquettes en feuilles</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">&#201;tiquettes en rouleaux</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">&#201;tiquettes s&#233;rigraphi&#233;es sur vinyle</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="mt32 mb16 padding-l-r-32 col-lg-4">
+                                            <img src="/web/image/2187/plan_border_bleu.png" class="img-fluid rounded-circle d-block mx-auto o_animate o_animate_both_scroll o_anim_pulse" data-original-title="" title="" aria-describedby="tooltip948603" style="animation-name: o_anim_pulse; visibility: visible; animation-play-state: paused;" />
+                                            <h3 class="o_h3" style="text-align: center;">
+                                                <font style="color: rgb(32, 53, 102); font-size: 24px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">Autres produits</font>
+                                            </h3>
+                                            <ul>
+                                                <li>
+                                                    <p class="mt16 text-justify">Feuilles de plan</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Impressions surdimensionn&#233;es</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Banni&#232;res</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Affiches</p>
+                                                </li>
+                                                <li>
+                                                    <p class="mt16 text-justify">Etc.</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="s_cover parallax s_parallax_is_fixed s_parallax_no_overflow_hidden pb0 pt56" data-scroll-background-ratio="1" style="background-image: none; --darkreader-inline-bgimage: none;" data-darkreader-inline-bgimage="">
+                                <span class="s_parallax_bg oe_img_bg oe_custom_bg" style="background-image: url(&quot;/web/image/4574/paper-4330983_light.jpg&quot;); background-position: 50% 0px;" />
+                                <div class="container">
+                                    <div class="row s_nb_column_fixed">
+                                        <div class="col-lg-12 s_text pt16 pb16" data-name="Text">
+                                            <h1 class="o_h1 pb24" style="text-align: center;">
+                                                <font style="color: rgb(255, 82, 0); --darkreader-inline-color: #ff631a;" data-darkreader-inline-color="">CLAUDE PIGEON</font>
+                                                <br />
+                                            </h1>
+                                            <h1 class="o_h1 pb0" style="text-align: center;">
+                                                <i class="fa fa-phone" style="font-size:48px;" />
+                                                <a href="tel:514-444-8004">
+                                                    <font style="color: rgb(32, 53, 102); font-size: 48px; --darkreader-inline-color: #9bbce0;" data-original-title="" title="" aria-describedby="tooltip665765" data-darkreader-inline-color="">514-444-8004</font>
+                                                </a>
+                                                <span style="font-weight: normal;">
+                                                    <font style="color: rgb(32, 53, 102); font-size: 48px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">
+                                                        <br />
+                                                    </font>
+                                                </span>
+                                            </h1>
+                                            <h1 class="o_h1 pt0" style="text-align: center;">
+                                                <span style="font-weight: normal;">
+                                                    <font style="color: rgb(32, 53, 102); font-size: 24px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">&amp;nbsp;</font>
+                                                </span>
+                                                <i class="fa fa-envelope" />
+                                                <a href="mailto:cpcouleurs@videotron.ca" data-original-title="" title="" aria-describedby="tooltip313103">
+                                                    <font style="color: rgb(32, 53, 102); font-size: 24px; --darkreader-inline-color: #9bbce0;" data-original-title="" title="" aria-describedby="tooltip500335" data-darkreader-inline-color="">cpcouleurs@videotron.ca</font>
+                                                </a>
+                                                <span style="font-weight: normal;" />
+                                            </h1>
+                                            <h1 class="o_h1" style="text-align: center;">
+                                                <font style="color: rgb(32, 53, 102); font-size: 36px; --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">Formulaire de contact</font>
+                                                <br />
+                                            </h1>
+                                            <p class="lead" style="text-align: center;">
+                                                <font style="color: rgb(32, 53, 102); --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">N'h&#233;sitez pas &#224; me contacter directement par t&#233;l&#233;phone, par courriel</font>
+                                            </p>
+                                            <p class="lead" style="text-align: center;">
+                                                <font style="color: rgb(32, 53, 102); --darkreader-inline-color: #9bbce0;" data-darkreader-inline-color="">&amp;nbsp;ou en utilisant le formulaire ci-dessous. &amp;nbsp;</font>
+                                                <br />
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="container readable o_website_form_builder oe_custom_bg" style="" id="contact">
+                                <form accept-charset="UTF-8" action="/website_form/" class="s_website_form col-md-12 mt32" data-model_name="crm.lead" data-force_action="" data-success_page="" enctype="multipart/form-data" method="post">
+                                    <div class="o_website_form_fields">
+                                        <div class="o_not_editable d-none o_default_snippet_text">This placeholder prevents its parent from disappearing when emptied</div>
+                                        <div class="form-group form-field o_required form-field-char" data-model-field="true" data-optional="false">
+                                            <label class="control-label" for="name">
+                                                <span>
+                                                    <span style="font-weight: normal;">
+                                                        <font style="font-size: 24px;">Sujet&amp;nbsp;</font>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                            <input name="name" required="required" class="form-control o_website_form_input" type="text" />
+                                        </div>
+                                        <div class="form-group form-field  form-field-char o_required" data-model-field="true" data-optional="true">
+                                            <label class="control-label" for="partner_name">
+                                                <span>
+                                                    <span style="font-weight: normal;">
+                                                        <font style="font-size: 24px;">Nom&amp;nbsp;</font>
+                                                    </span>
+                                                </span>
+                                            </label>
+                                            <input name="partner_name" class="form-control o_website_form_input" type="text" required="required" />
+                                        </div>
+                                        <div class="form-group form-field  form-field-char o_required" data-model-field="true" data-optional="true">
+                                            <label class="control-label" for="phone">
+                                                <span>
+                                                    <font style="font-size: 24px;">
+                                                        <span style="font-weight: normal;">T&#233;l&#233;phone</span>
+                                                    </font>
+                                                </span>
+                                            </label>
+                                            <input name="phone" class="form-control o_website_form_input" type="text" required="required" />
+                                        </div>
+                                        <div class="form-group form-field  form-field-char o_required" data-model-field="true" data-optional="true">
+                                            <label class="control-label" for="email_from">
+                                                <span>
+                                                    <font style="font-size: 24px;">
+                                                        <span style="font-weight: normal;">Courriel &amp;nbsp;</span>
+                                                    </font>
+                                                </span>
+                                            </label>
+                                            <input name="email_from" class="form-control o_website_form_input" type="text" required="required" />
+                                            <p class="help-block">&amp;nbsp;</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="text-align:center">
+                                        <button type="button" class="btn btn-primary btn-lg o_website_form_send o_default_snippet_text">Envoyer</button>
+                                        <span id="o_website_form_result" />
+                                    </div>
+                                </form>
+                            </section>
+                        </div>
+                    </t>
+                </t>
+            </field>
+            <field name="key">website.homepage</field>
+            <field name="name">Home</field>
+            <field name="type">qweb</field>
+        </record>
+    </data>
+</odoo>
