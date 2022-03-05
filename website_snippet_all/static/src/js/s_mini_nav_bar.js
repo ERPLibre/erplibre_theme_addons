@@ -1,4 +1,4 @@
-odoo.define('theme_common.s_mini_nav_bar', function (require) {
+odoo.define('website_snippet_all.s_mini_nav_bar', function (require) {
 'use strict';
 
 var sAnimation = require('website.content.snippets.animation');

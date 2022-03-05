@@ -1,4 +1,4 @@
-odoo.define('theme_common.s_google_map_frontend', function (require) {
+odoo.define('website_snippet_all.s_google_map_frontend', function (require) {
 'use strict';
 
 var core = require('web.core');
@@ -30,7 +30,7 @@ sAnimation.registry.s_google_map = sAnimation.Class.extend({
                 };
 
                 defs.push(this._rpc({
-                    route: '/theme_common/google_maps_api_key',
+                    route: '/website_snippet_all/google_maps_api_key',
                 }).then(function (data) {
                     var key_param = '';
                     var data_json = JSON.parse(data);

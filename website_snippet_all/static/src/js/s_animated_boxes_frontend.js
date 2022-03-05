@@ -1,4 +1,4 @@
-odoo.define('theme_common.s_animated_boxes_frontend', function (require) {
+odoo.define('website_snippet_all.s_animated_boxes_frontend', function (require) {
     'use strict';
 
 var sAnimations = require('website.content.snippets.animation');

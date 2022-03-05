@@ -1,15 +1,15 @@
-odoo.define('theme_common.s_google_map_editor', function (require) {
+odoo.define('website_snippet_all.s_google_map_editor', function (require) {
 'use strict';
 
 var Dialog = require('web_editor.widget').Dialog;
 var core = require('web.core');
 var sOptions = require('web_editor.snippets.options');
-var googleScriptLoaded = require('theme_common.s_google_map_frontend').googleScriptLoaded;
+var googleScriptLoaded = require('website_snippet_all.s_google_map_frontend').googleScriptLoaded;
 
 var _t = core._t;
 
 sOptions.registry.map = sOptions.Class.extend({
-    xmlDependencies: ['/theme_common/static/src/xml/s_google_map_modal.xml'],
+    xmlDependencies: ['/website_snippet_all/static/src/xml/s_google_map_modal.xml'],
     defaultLocation: '(50.854975,4.3753899)',
 
     /**
@@ -52,7 +52,7 @@ sOptions.registry.map = sOptions.Class.extend({
                 }},
                 {text: _t("Cancel"), close: true}
             ],
-            $content: $(core.qweb.render('theme_common.s_google_map_modal'))
+            $content: $(core.qweb.render('website_snippet_all.s_google_map_modal'))
         });
 
         this.dialog.opened().then((function () {

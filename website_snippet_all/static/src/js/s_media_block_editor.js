@@ -1,9 +1,9 @@
-odoo.define('theme_common.s_media_block_editor', function (require) {
+odoo.define('website_snippet_all.s_media_block_editor', function (require) {
     'use strict';
 
     var core = require('web.core');
     var s_options = require('web_editor.snippets.options');
-    require("theme_common.s_media_block_frontend");
+    require("website_snippet_all.s_media_block_frontend");
 
     var QWeb = core.qweb;
 
@@ -25,14 +25,14 @@ odoo.define('theme_common.s_media_block_editor', function (require) {
     }),
 
     s_options.registry.s_media_block = s_options.Class.extend({
-        xmlDependencies: ['/theme_common/static/src/xml/s_media_block_modal.xml'],
+        xmlDependencies: ['/website_snippet_all/static/src/xml/s_media_block_modal.xml'],
         videoOpt: function (previewMode, value, $opt) {
             var self = this;
             self.trigger_up('animation_stop_demand', {
                 editableMode: true,
                 $target: self.$target,
             });
-            self.$modal = $(QWeb.render("theme_common.s_media_block_modal"));
+            self.$modal = $(QWeb.render("website_snippet_all.s_media_block_modal"));
             self.$modal.appendTo('body').modal();
 
             var $src        = self.$modal.find('#media_block_src'),

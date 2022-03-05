@@ -1,4 +1,4 @@
-odoo.define('theme_common.s_media_block_frontend', function (require) {
+odoo.define('website_snippet_all.s_media_block_frontend', function (require) {
     'use strict';
 
     var sAnimation = require('website.content.snippets.animation');

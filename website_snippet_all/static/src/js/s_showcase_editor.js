@@ -1,4 +1,4 @@
-odoo.define('theme_common.s_showcase_editor.js', function (require) {
+odoo.define('website_snippet_all.s_showcase_editor.js', function (require) {
     'use strict';
 
     var s_options = require('web_editor.snippets.options');

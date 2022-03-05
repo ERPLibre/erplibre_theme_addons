@@ -1,4 +1,4 @@
-odoo.define('theme_common.s_animated_boxes_editor', function (require) {
+odoo.define('website_snippet_all.s_animated_boxes_editor', function (require) {
     'use strict';
 
     var s_options = require('web_editor.snippets.options');

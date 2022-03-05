@@ -1,10 +1,10 @@
-odoo.define('theme_common.s_css_slider_editor', function (require) {
+odoo.define('website_snippet_all.s_css_slider_editor', function (require) {
     'use strict';
 
     var s_options = require('web_editor.snippets.options');
 
     s_options.registry.s_css_slider_slide = s_options.Class.extend({
-        newSlideUrl: "/web/image/theme_common.image_content_23",
+        newSlideUrl: "/web/image/website_snippet_all.image_content_23",
 
         start: function () {
             var self = this;

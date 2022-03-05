@@ -1,4 +1,4 @@
-odoo.define('theme_common.s_progress_bar', function (require) {
+odoo.define('website_snippet_all.s_progress_bar', function (require) {
     'use strict';
 
     var s_options = require('web_editor.snippets.options');

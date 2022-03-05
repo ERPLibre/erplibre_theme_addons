@@ -4,9 +4,9 @@
         <section class="s_showcase_slider o_not-animable">
             <div class="s_ss_slider_wrapper">
                 <ul class="s_ss_slider o_animable">
-                    <li class="selected o_not-animable"><img src="/web/image/theme_common.image_content_20"/></li>
-                    <li><img class="o_not-animable" src="/web/image/theme_common.image_content_21"/></li>
-                    <li><img class="o_not-animable" src="/web/image/theme_common.image_content_22"/></li>
+                    <li class="selected o_not-animable"><img src="/web/image/website_snippet_all.image_content_20"/></li>
+                    <li><img class="o_not-animable" src="/web/image/website_snippet_all.image_content_21"/></li>
+                    <li><img class="o_not-animable" src="/web/image/website_snippet_all.image_content_22"/></li>
                 </ul>
                 <ul class="s_ss_slider_navigation">
                     <li><span contentEditable="false" class="o_not-animable fa fa-chevron-left s_ss_prev inactive"/></li>

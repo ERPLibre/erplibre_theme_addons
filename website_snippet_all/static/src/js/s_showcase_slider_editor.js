@@ -1,8 +1,8 @@
-odoo.define('theme_common.s_showcase_slider_editor.js', function (require) {
+odoo.define('website_snippet_all.s_showcase_slider_editor.js', function (require) {
     'use strict';
 
     var s_options = require('web_editor.snippets.options');
-    require("theme_common.s_showcase_slider_frontend");
+    require("website_snippet_all.s_showcase_slider_frontend");
 
     s_options.registry.s_showcase_slider = s_options.Class.extend({
         start: function () {
@@ -28,7 +28,7 @@ odoo.define('theme_common.s_showcase_slider_editor.js', function (require) {
 
         addSlide: function () {
             var $currentSlide = this.$target.find(".s_ss_slider > .selected");
-            $currentSlide.after("<li><img class=\"o_not-animable\" src=\"/web/image/theme_common.image_content_23\"/></li>");
+            $currentSlide.after("<li><img class=\"o_not-animable\" src=\"/web/image/website_snippet_all.image_content_23\"/></li>");
             this.resetSlides(true);
         },
 
