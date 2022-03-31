@@ -1,0 +1,35 @@
+// License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
+
+.o_hello_world{
+    top: 0;
+    left: 0;
+    font-size: medium;
+    .secondary_text{
+        color: red;
+    }
+    background-image: url("/erplibre_website_snippets_helloworld/static/src/img/img_5terre_wide.jpg");
+    background-size: cover;
+}
+// snippet content options
+.top-left{
+  top: 0;
+  left: 0;
+}
+.top-right{
+  top: 0;
+  right: 0;
+}
+.bottom-left{
+  bottom: 0;
+  left: 0;
+}
+.bottom-right{
+  bottom: 0;
+  right: 0;
+}
+.absolute-center {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
