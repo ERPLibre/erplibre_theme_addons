@@ -4,9 +4,9 @@
   <!-- Snippet Content-->
   <template id="s_helloworld" name="Helloworld">
     <section>
-      <div>
-        <h1>Helloworld</h1>
-      </div>
+        <div>
+          <h1>Helloworld</h1>
+        </div>
     </section>
   </template>
 
@@ -16,5 +16,4 @@
       <t t-snippet="erplibre_website_snippets_helloworld.s_helloworld" t-thumbnail="/erplibre_website_snippets_helloworld/static/src/img/helloworld.png"/>
     </xpath>
   </template>
-
 </odoo>
