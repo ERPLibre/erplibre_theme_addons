@@ -5,7 +5,7 @@
   <template id="s_helloworld" name="Helloworld">
     <section>
         <div>
-          <h1>Helloworld</h1>
+          <h1 id="helloworld">Helloworld</h1>
         </div>
     </section>
   </template>
@@ -14,6 +14,12 @@
   <template id="add_snippet_structure_to_menu" inherit_id="website.snippets">
     <xpath expr="//div[@id='snippet_structure']/div[hasclass('o_panel_body')]" position="inside">
       <t t-snippet="erplibre_website_snippets_helloworld.s_helloworld" t-thumbnail="/erplibre_website_snippets_helloworld/static/src/img/helloworld.png"/>
+    </xpath>
+  </template>
+  <!-- Add stylesheet & javascript-->
+  <template id="assets_frontend_erplibre_website_snippets_cards" inherit_id="website.assets_frontend">
+    <xpath expr="//script[last()]" position="after">
+      <script type="text/javascript" src="/erplibre_website_snippets_helloworld/static/src/js/website.helloworld.js"/>
     </xpath>
   </template>
 </odoo>
