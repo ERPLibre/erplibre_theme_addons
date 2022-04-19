@@ -3,9 +3,9 @@
 <odoo>
   <!-- Snippet Content-->
   <template id="s_helloworld" name="Helloworld">
-    <section>
-        <div>
-          <h1 id="helloworld">Helloworld</h1>
+    <section class="website_helloworld">
+        <div id="helloworld">
+          <h1 id="message">Helloworld</h1>
         </div>
     </section>
   </template>
@@ -19,7 +19,7 @@
   <!-- Add stylesheet & javascript-->
   <template id="assets_frontend_erplibre_website_snippets_cards" inherit_id="website.assets_frontend">
     <xpath expr="//script[last()]" position="after">
-      <script type="text/javascript" src="/erplibre_website_snippets_helloworld/static/src/js/website.helloworld.js"/>
+      <script type="text/javascript" src="/erplibre_website_snippets_helloworld/static/src/js/website_helloworld.js"/>
     </xpath>
   </template>
 </odoo>
